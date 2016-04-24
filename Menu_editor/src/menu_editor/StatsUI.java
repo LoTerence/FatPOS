@@ -1,3 +1,7 @@
+package menu_editor;
+
+import middle_end.StatsPage;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,6 +22,7 @@ public class StatsUI extends javax.swing.JFrame {
     public StatsUI() {
         //this.statsPage = new StatsPage();
         initComponents();
+        setVisible(true);
     }
     
     /**
@@ -43,7 +48,7 @@ public class StatsUI extends javax.swing.JFrame {
         dishLeastNameLabel = new javax.swing.JLabel();
         dishLeastLabel = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Statistics View");
 
