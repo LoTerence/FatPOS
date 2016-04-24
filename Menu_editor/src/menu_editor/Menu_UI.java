@@ -18,8 +18,12 @@ public class Menu_UI extends javax.swing.JFrame {
      */
     public Menu_UI() {
         initComponents();
+        frame = this;
+        //statspage = new StatsUI();
+        //statspage.setVisible(false);
     }
-
+    public MenuEditorUI statspage;
+    public JFrame frame;
     private KitchenView kitchen;
     private NewOrder order;
     private Menu menu;
@@ -1359,30 +1363,30 @@ public class Menu_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_category7Button6ActionPerformed
 
     private void removeItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeItemButtonActionPerformed
-   //Prevents items from being removed when no list items are being selected.
-    if(!orderJList.isSelectionEmpty())
-    {
-        DefaultListModel model = getListModel();
-        
-        //Remove the item from the list.
-        MenuItem item = order.removeFromOrder(orderJList.getSelectedIndex());
-        model.removeElement(orderJList.getSelectedValue()); 
-        // item.setItemPrice(75);
-        order.removeFromTotal(item.getItemPrice());
-        //Safeguard against having a negative totalCost
-        if(order.getTotalCost() < 0)
-        {
-            order.addToTotal(-order.getTotalCost());
-            totalCost = "" + 0;
-        }
-        else
-        {
-           totalCost = "" + order.getTotalCost();
-        }
+    //Prevents items from being removed when no list items are being selected.
+     if(!orderJList.isSelectionEmpty())
+     {
+         DefaultListModel model = getListModel();
 
-        orderTotalLabel1.setText(totalCost);
-        
-    }
+         //Remove the item from the list.
+         MenuItem item = order.removeFromOrder(orderJList.getSelectedIndex());
+         model.removeElement(orderJList.getSelectedValue()); 
+         // item.setItemPrice(75);
+         order.removeFromTotal(item.getItemPrice());
+         //Safeguard against having a negative totalCost
+         if(order.getTotalCost() < 0)
+         {
+             order.addToTotal(-order.getTotalCost());
+             totalCost = "" + 0;
+         }
+         else
+         {
+            totalCost = "" + order.getTotalCost();
+         }
+
+         orderTotalLabel1.setText(totalCost);
+
+     }
     }//GEN-LAST:event_removeItemButtonActionPerformed
 
     private void category1Button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_category1Button1ActionPerformed
@@ -1402,6 +1406,11 @@ public class Menu_UI extends javax.swing.JFrame {
     private void placeOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeOrderButtonActionPerformed
         //Sends the order to the kitchen by adding the order to the list of orders for the kitchen to see.
         order.sendToKitchen();
+        JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
+        //frame.setVisible(false);
+        //statspage.setVisible(true);
+        //System.exit(0);
+        
         
     }//GEN-LAST:event_placeOrderButtonActionPerformed
 
