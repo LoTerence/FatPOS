@@ -1,5 +1,5 @@
 
-package menu_editor;
+package user_interface;
 
 import java.sql.*;
 import javax.swing.*; 
