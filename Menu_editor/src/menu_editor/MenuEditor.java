@@ -5,6 +5,8 @@
  */
 package menu_editor;
 
+import middle_end.MenuItem;
+
 /**
  * <!-- begin-user-doc -->
  * Class that allows wait staff to edit a menu. This involves adding and removing items and categories.

@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package menu_editor;
+import middle_end.MenuItem;
+import middle_end.NewOrder;
 import javax.swing.*;
 /**
  *

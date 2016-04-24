@@ -5,6 +5,8 @@
  */
 package menu_editor;
 
+import middle_end.MenuItem;
+
 public class Category
 {
 	/**

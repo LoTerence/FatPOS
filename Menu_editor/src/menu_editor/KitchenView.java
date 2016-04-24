@@ -5,6 +5,8 @@
  */
 package menu_editor;
 
+import middle_end.NewOrder;
+
 /**
  * <!-- begin-user-doc -->
  * Receives orders and displays them, removes the orders once they are finished.
