@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package menu_editor;
+package user_interface;
 
 /**
  *
@@ -63,7 +63,6 @@ public class menuUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(1000, 550));
 
         display.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         display.setHorizontalAlignment(javax.swing.JTextField.RIGHT);

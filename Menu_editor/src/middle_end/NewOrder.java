@@ -5,8 +5,6 @@
  */
 package middle_end;
 
-import menu_editor.KitchenView;
-
 /**
  * <!-- begin-user-doc -->
  * Whenever wait staff place an order, a NewOrder object is instantiated.
