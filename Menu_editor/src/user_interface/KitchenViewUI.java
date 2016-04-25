@@ -392,22 +392,32 @@ public class KitchenViewUI extends javax.swing.JFrame {
         if(model1.getSize() == 0)
         {
             orderList1.setModel(newModel);
+            //Message to verify that the order was sent to the kitchen.
+            JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         }
         else if(model2.getSize() == 0)
         {
             orderList2.setModel(newModel);
+            //Message to verify that the order was sent to the kitchen.
+            JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         }
         else if(model3.getSize() == 0)
         {
             orderList3.setModel(newModel);
+            //Message to verify that the order was sent to the kitchen.
+            JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         }
         else if(model4.isEmpty())
         {
             orderList4.setModel(newModel);
+            //Message to verify that the order was sent to the kitchen.
+            JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         }
         else if(model5.isEmpty())
         {
             orderList5.setModel(newModel);
+            //Message to verify that the order was sent to the kitchen.
+            JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         }
         //Otherwise print to the screen that the order cannot be added as the limit has been reached.
         else

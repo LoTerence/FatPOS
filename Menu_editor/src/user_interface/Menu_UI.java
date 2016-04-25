@@ -1406,8 +1406,6 @@ public class Menu_UI extends javax.swing.JFrame {
         //Sends the order to the kitchen by adding the order to the list of orders for the kitchen to see.
         order.sendToKitchen();
         kitchenUI.addOrderToEmptyJList(getListModel());
-        //Message to verify that the order was sent to the kitchen.
-        JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         //Hide the order window.
         frame.setVisible(false);
         //Return to the start menu.
