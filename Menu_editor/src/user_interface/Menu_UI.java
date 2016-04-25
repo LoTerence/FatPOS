@@ -125,6 +125,7 @@ public class Menu_UI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         orderJList = new javax.swing.JList<>();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
 
         menu = new Menu();
@@ -1910,12 +1911,12 @@ public class Menu_UI extends javax.swing.JFrame {
         kitchenUI.addOrderToEmptyJList(getListModel());
         //Hide the order window.
         frame.setVisible(false);
-<<<<<<< HEAD
+/* <<<<<<< HEAD
 =======
         //Return to the start menu.
         startmenu.setVisible(true);
 >>>>>>> refs/remotes/origin/master
-       // kitchenUI.setVisible(true);
+       // kitchenUI.setVisible(true); */
     }//GEN-LAST:event_placeOrderButtonActionPerformed
 
     private void category1Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_category1Button3ActionPerformed

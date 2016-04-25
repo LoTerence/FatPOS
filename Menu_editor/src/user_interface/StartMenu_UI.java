@@ -119,6 +119,7 @@ public class StartMenu_UI extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    //the button for making a new order
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         Menu_UI menu = new Menu_UI(kitchenViewUI, startFrame);
         menu.setVisible(true);
