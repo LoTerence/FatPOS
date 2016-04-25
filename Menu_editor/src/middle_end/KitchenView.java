@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package middle_end;
-
+import javax.swing.*;
 /**
  * <!-- begin-user-doc -->
  * Receives orders and displays them, removes the orders once they are finished.
@@ -23,7 +23,11 @@ public class KitchenView
 	 */
 	
 	private NewOrder orderList[];
-
+        public JList orderJList1;
+        public JList orderJList2;
+        public JList orderJList3;
+        public JList orderJList4;
+        public JList orderJList5;
 	/**
 	 * <!-- begin-user-doc -->
 	 * Constructor to initialize KitchenView's order list.
@@ -91,5 +95,6 @@ public class KitchenView
 			}
 		}
 	}
-
+        
+       
 }
