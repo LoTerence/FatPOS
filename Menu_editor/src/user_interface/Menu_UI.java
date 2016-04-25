@@ -23,7 +23,6 @@ public class Menu_UI extends javax.swing.JFrame {
         frame = this;
         startmenu = start;
         kitchenUI = kitchenView;
-        //statspage.setVisible(false);
     }
     public StartMenu_UI startmenu;
     public KitchenViewUI kitchenUI;
@@ -2397,7 +2396,7 @@ public class Menu_UI extends javax.swing.JFrame {
     //clicks on a button.
     private void addItemToOrder(MenuItem item, DefaultListModel model, JButton button)
     {
-        //Add a comment to the item in the order. For example, if a customer orders a 
+       //Add a comment to the item in the order. For example, if a customer orders a 
        //cheeseburger, maybe they want no lettuce or extra ketchup.
        String comment = JOptionPane.showInputDialog(null, "Any special instructions regarding your order?\n"
                + "Leave the text field blank if there are no special instructions.");
