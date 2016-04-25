@@ -261,9 +261,8 @@ public class NewOrder
 	 * @ordered
 	 */
 	
-	public void sendToKitchen(DefaultListModel orderModel) {
+	public void sendToKitchen() {
 		kitchenView.addOrder(this);
-                kitchenView.addOrderList(orderModel);
 	}
 
 }
