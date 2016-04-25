@@ -1950,21 +1950,10 @@ public class Menu_UI extends javax.swing.JFrame {
         //Sends the order to the kitchen by adding the order to the list of orders for the kitchen to see.
         order.sendToKitchen();
         kitchenUI.addOrderToEmptyJList(getListModel());
+        
+        //close the new order window
+        this.dispose();
 
-        //Hide the order window.
-        frame.setVisible(false);
-<<<<<<< HEAD
-/* <<<<<<< HEAD
-=======
-        //Return to the start menu.
-        startmenu.setVisible(true);
->>>>>>> refs/remotes/origin/master
-       // kitchenUI.setVisible(true); */
-=======
-        //Return to the start menu.
-        startmenu.setVisible(true);
-       // kitchenUI.setVisible(true);
->>>>>>> refs/remotes/origin/master
     }//GEN-LAST:event_placeOrderButtonActionPerformed
 
     private void category1Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_category1Button3ActionPerformed
