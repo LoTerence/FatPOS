@@ -77,6 +77,7 @@ public class StatsPage
   */
     public StatsPage(){
         super();
+        this.initializeStats();
     }
 
  /**
@@ -234,6 +235,24 @@ public class StatsPage
     public String getLeastDishesName() {
         return this.leastDishesName;
     }
-
+     /**
+  * <!-- begin-user-doc -->
+  * Initializes the statistics of the page.
+  * <!--  end-user-doc  -->
+     * @return 
+  * @generated
+  * @ordered
+  */
+    
+   private void initializeStats()
+   {
+       this.setMonthlyProfit(0);
+       this.setLeastDishesName("");
+       this.setMostDishesName("");
+       this.setLeastDishes(0);
+       this.setMostDishes(0);
+       this.setLeastDishes(0);
+       this.setMonthlyPrepTime(0);
+   }
 }
 

@@ -143,7 +143,7 @@ public class MenuEditor
 		}
 		for(int j = 0; j < menu.categoryArray[i].itemList.length; j++)
 		{
-			if(menu.categoryArray[i].itemList[j].itemName.equals(itemName))
+			if(menu.categoryArray[i].itemList[j].getItemName().equals(itemName))
 			{
 				for(int k = j + 1; k < menu.categoryArray[i].itemList.length; k++)
 				{

@@ -34,6 +34,7 @@ public class NewOrder
 	
 	private int totalPrice;
 
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * A comment for an order, an example would be no onions on a burger.
@@ -265,4 +266,5 @@ public class NewOrder
 		kitchenView.addOrder(this);
 	}
 
+        
 }
