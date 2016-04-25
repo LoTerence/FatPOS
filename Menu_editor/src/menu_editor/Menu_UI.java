@@ -17,10 +17,10 @@ public class Menu_UI extends javax.swing.JFrame {
     public Menu_UI() {
         initComponents();
         frame = this;
-        //statspage = new StatsUI();
+        startmenu = new StartMenu_UI();
         //statspage.setVisible(false);
     }
-    public MenuEditorUI statspage;
+    public StartMenu_UI startmenu;
     public JFrame frame;
     private KitchenView kitchen;
     private NewOrder order;
@@ -1404,12 +1404,12 @@ public class Menu_UI extends javax.swing.JFrame {
     private void placeOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeOrderButtonActionPerformed
         //Sends the order to the kitchen by adding the order to the list of orders for the kitchen to see.
         order.sendToKitchen();
+        //Message to verify that the order was sent to the kitchen.
         JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
-        //frame.setVisible(false);
-        //statspage.setVisible(true);
-        //System.exit(0);
-        
-        
+        //Hide the order window.
+        frame.setVisible(false);
+        //Return to the start menu.
+        startmenu.setVisible(true);
     }//GEN-LAST:event_placeOrderButtonActionPerformed
 
     private void category1Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_category1Button3ActionPerformed
