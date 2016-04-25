@@ -18,11 +18,9 @@ public class Menu_UI extends javax.swing.JFrame {
     public Menu_UI(KitchenViewUI kitchenView) {
         initComponents();
         frame = this;
-        startmenu = new StartMenu_UI();
         kitchenUI = kitchenView;
         //statspage.setVisible(false);
     }
-    public StartMenu_UI startmenu;
     public KitchenViewUI kitchenUI;
     public JFrame frame;
     private KitchenView kitchen;
@@ -1912,8 +1910,6 @@ public class Menu_UI extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         //Hide the order window.
         frame.setVisible(false);
-        //Return to the start menu.
-        startmenu.setVisible(true);
        // kitchenUI.setVisible(true);
     }//GEN-LAST:event_placeOrderButtonActionPerformed
 
