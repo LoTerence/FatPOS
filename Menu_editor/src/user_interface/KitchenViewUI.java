@@ -51,7 +51,6 @@ public class KitchenViewUI extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         removeOrderButton5 = new javax.swing.JButton();
 
-        setTitle("Kitchen View");
         setBackground(new java.awt.Color(0, 0, 0));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
@@ -291,8 +290,6 @@ public class KitchenViewUI extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        getAccessibleContext().setAccessibleDescription("");
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -392,25 +389,35 @@ public class KitchenViewUI extends javax.swing.JFrame {
         DefaultListModel model4 = getListModel(orderList4);
         DefaultListModel model5 = getListModel(orderList5);
         //Go through each list model, if one is empty then add it to the list, which will update the list.
-        if(model1.isEmpty())
+        if(model1.getSize() == 0)
         {
             orderList1.setModel(newModel);
+            //Message to verify that the order was sent to the kitchen.
+            JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         }
-        else if(model2.isEmpty())
+        else if(model2.getSize() == 0)
         {
             orderList2.setModel(newModel);
+            //Message to verify that the order was sent to the kitchen.
+            JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         }
-        else if(model3.isEmpty())
+        else if(model3.getSize() == 0)
         {
             orderList3.setModel(newModel);
+            //Message to verify that the order was sent to the kitchen.
+            JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         }
         else if(model4.isEmpty())
         {
             orderList4.setModel(newModel);
+            //Message to verify that the order was sent to the kitchen.
+            JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         }
         else if(model5.isEmpty())
         {
             orderList5.setModel(newModel);
+            //Message to verify that the order was sent to the kitchen.
+            JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         }
         //Otherwise print to the screen that the order cannot be added as the limit has been reached.
         else

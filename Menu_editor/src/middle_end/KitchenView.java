@@ -23,11 +23,6 @@ public class KitchenView
 	 */
 	
 	private NewOrder orderList[];
-        public JList orderJList1;
-        public JList orderJList2;
-        public JList orderJList3;
-        public JList orderJList4;
-        public JList orderJList5;
 	/**
 	 * <!-- begin-user-doc -->
 	 * Constructor to initialize KitchenView's order list.
@@ -96,16 +91,5 @@ public class KitchenView
 		}
 	}
         
-        /**
-	 * <!-- begin-user-doc -->
-	 * Add an order to a JList component for the order list.
-	 * <!--  end-user-doc  -->
-     * @param orderModel
-	 * @generated
-	 * @ordered
-	 */
-        public void addOrderList(DefaultListModel orderModel)
-        {
-            
-        }
+       
 }

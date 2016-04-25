@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package user_interface;
-
+import javax.swing.*;
 /**
  *
  * @author Terence Lo
@@ -17,8 +17,10 @@ public class StartMenu_UI extends javax.swing.JFrame {
     public StartMenu_UI() {
         kitchenViewUI = new KitchenViewUI();
         kitchenViewUI.setVisible(false);
+        startFrame = this;
         initComponents();
     }
+    public StartMenu_UI startFrame;
     public KitchenViewUI kitchenViewUI;
     /**
      * This method is called from within the constructor to initialize the form.
@@ -118,7 +120,7 @@ public class StartMenu_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Menu_UI menu = new Menu_UI(kitchenViewUI);
+        Menu_UI menu = new Menu_UI(kitchenViewUI, startFrame);
         menu.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
