@@ -20,6 +20,7 @@ public class Menu_UI extends javax.swing.JFrame {
         frame = this;
         startmenu = new StartMenu_UI();
         //statspage.setVisible(false);
+        setVisible(true);
     }
     public StartMenu_UI startmenu;
     public JFrame frame;
