@@ -51,7 +51,6 @@ public class KitchenViewUI extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         removeOrderButton5 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
@@ -380,6 +379,44 @@ public class KitchenViewUI extends javax.swing.JFrame {
             }
         });
     }
+
+    public void addOrderToEmptyJList(DefaultListModel newModel)
+    {
+        //Retrieve all of the list models.
+        DefaultListModel model1 = getListModel(orderList1);
+        DefaultListModel model2 = getListModel(orderList2);
+        DefaultListModel model3 = getListModel(orderList3);
+        DefaultListModel model4 = getListModel(orderList4);
+        DefaultListModel model5 = getListModel(orderList5);
+        //Go through each list model, if one is empty then add it to the list, which will update the list.
+        if(model1.getSize() == 0)
+        {
+            orderList1.setModel(newModel);
+        }
+        else if(model2.getSize() == 0)
+        {
+            orderList2.setModel(newModel);
+        }
+        else if(model3.getSize() == 0)
+        {
+            orderList3.setModel(newModel);
+        }
+        else if(model4.isEmpty())
+        {
+            orderList4.setModel(newModel);
+        }
+        else if(model5.isEmpty())
+        {
+            orderList5.setModel(newModel);
+        }
+        //Otherwise print to the screen that the order cannot be added as the limit has been reached.
+        else
+        {
+            JOptionPane.showMessageDialog(null, "The order cannot be added as the limit has been reached!");
+        }
+   
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;

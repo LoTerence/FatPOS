@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package user_interface;
-
+import javax.swing.*;
 /**
  *
  * @author Terence Lo
@@ -15,9 +15,13 @@ public class StartMenu_UI extends javax.swing.JFrame {
      * Creates new form StartMenu_UI
      */
     public StartMenu_UI() {
+        kitchenViewUI = new KitchenViewUI();
+        kitchenViewUI.setVisible(false);
+        startFrame = this;
         initComponents();
     }
-    
+    public StartMenu_UI startFrame;
+    public KitchenViewUI kitchenViewUI;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,8 +48,18 @@ public class StartMenu_UI extends javax.swing.JFrame {
         jButton2.setText("Configure Restaurant Menu");
 
         jButton3.setText("Create a new Order");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Kitchen View");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Statistics Report");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -104,6 +118,15 @@ public class StartMenu_UI extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Menu_UI menu = new Menu_UI(kitchenViewUI, startFrame);
+        menu.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        kitchenViewUI.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
