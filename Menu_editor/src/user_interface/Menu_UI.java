@@ -15,11 +15,14 @@ public class Menu_UI extends javax.swing.JFrame {
     /**
      * Creates new form Menu_UI
      */
-    public Menu_UI(KitchenViewUI kitchenView) {
+    public Menu_UI(KitchenViewUI kitchenView, StartMenu_UI start) {
         initComponents();
         frame = this;
+        startmenu = start;
         kitchenUI = kitchenView;
+        //statspage.setVisible(false);
     }
+    public StartMenu_UI startmenu;
     public KitchenViewUI kitchenUI;
     public JFrame frame;
     private KitchenView kitchen;
@@ -122,8 +125,6 @@ public class Menu_UI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         orderJList = new javax.swing.JList<>();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("new order form");
         setBackground(new java.awt.Color(0, 0, 0));
         setPreferredSize(new java.awt.Dimension(1500, 775));
 
@@ -1403,12 +1404,13 @@ public class Menu_UI extends javax.swing.JFrame {
 
     private void placeOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeOrderButtonActionPerformed
         //Sends the order to the kitchen by adding the order to the list of orders for the kitchen to see.
-        order.sendToKitchen(getListModel());
+        order.sendToKitchen();
         kitchenUI.addOrderToEmptyJList(getListModel());
-        //Message to verify that the order was sent to the kitchen.
-        JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
         //Hide the order window.
         frame.setVisible(false);
+        //Return to the start menu.
+        startmenu.setVisible(true);
+       // kitchenUI.setVisible(true);
     }//GEN-LAST:event_placeOrderButtonActionPerformed
 
     private void category1Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_category1Button3ActionPerformed
