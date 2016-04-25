@@ -4,11 +4,8 @@
  * and open the template in the editor.
  */
 package user_interface;
-import middle_end.KitchenView;
-import middle_end.Menu;
-import middle_end.MenuItem;
-import middle_end.NewOrder;
 import javax.swing.*;
+import middle_end.*;
 /**
  *
  * @author Dylan Girard
@@ -21,10 +18,10 @@ public class Menu_UI extends javax.swing.JFrame {
     public Menu_UI() {
         initComponents();
         frame = this;
-        //statspage = new StatsUI();
+        startmenu = new StartMenu_UI();
         //statspage.setVisible(false);
     }
-    public MenuEditorUI statspage;
+    public StartMenu_UI startmenu;
     public JFrame frame;
     private KitchenView kitchen;
     private NewOrder order;
@@ -128,6 +125,7 @@ public class Menu_UI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setPreferredSize(new java.awt.Dimension(1500, 750));
 
         menu = new Menu();
         menu.initializeCategories(8);
@@ -1407,12 +1405,12 @@ public class Menu_UI extends javax.swing.JFrame {
     private void placeOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeOrderButtonActionPerformed
         //Sends the order to the kitchen by adding the order to the list of orders for the kitchen to see.
         order.sendToKitchen();
+        //Message to verify that the order was sent to the kitchen.
         JOptionPane.showMessageDialog(null, "Order was sent to the kitchen.");
-        //frame.setVisible(false);
-        //statspage.setVisible(true);
-        //System.exit(0);
-        
-        
+        //Hide the order window.
+        frame.setVisible(false);
+        //Return to the start menu.
+        startmenu.setVisible(true);
     }//GEN-LAST:event_placeOrderButtonActionPerformed
 
     private void category1Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_category1Button3ActionPerformed
