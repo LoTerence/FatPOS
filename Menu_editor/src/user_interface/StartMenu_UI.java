@@ -15,9 +15,11 @@ public class StartMenu_UI extends javax.swing.JFrame {
      * Creates new form StartMenu_UI
      */
     public StartMenu_UI() {
+        kitchenViewUI = new KitchenViewUI();
+        kitchenViewUI.setVisible(false);
         initComponents();
     }
-    
+    public KitchenViewUI kitchenViewUI;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -115,13 +117,14 @@ public class StartMenu_UI extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        KitchenViewUI kit = new KitchenViewUI();
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Menu_UI newOrder = new Menu_UI();
+        Menu_UI menu = new Menu_UI(kitchenViewUI);
+        menu.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        kitchenViewUI.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
