@@ -51,6 +51,7 @@ public class KitchenViewUI extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         removeOrderButton5 = new javax.swing.JButton();
 
+        setTitle("Kitchen View");
         setBackground(new java.awt.Color(0, 0, 0));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
@@ -289,6 +290,8 @@ public class KitchenViewUI extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
