@@ -22,7 +22,7 @@ public class MenuItem
 	 * @ordered
 	 */
 	
-	public String itemName;
+	private String itemName;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public class MenuItem
 	 * @ordered
 	 */
 	
-	public int itemPrice;
+	private int itemPrice;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -42,8 +42,18 @@ public class MenuItem
 	 * @ordered
 	 */
 	
-	public int itemPrepTime;
+	private int itemPrepTime;
 
+        /**
+	 * <!-- begin-user-doc -->
+	 * How many times the item was ordered.
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+	
+	private int orderCount;
+        
 	/**
 	 * <!-- begin-user-doc -->
 	 * Constructor to create a MenuItem object.
@@ -58,6 +68,9 @@ public class MenuItem
 	 * <!-- begin-user-doc -->
 	 * Constructor to create a MenuItem object, and will initialize the data fields.
 	 * <!--  end-user-doc  -->
+     * @param itemName The name of the item.
+     * @param itemPrice The cost of the item.
+     * @param itemPrepTime The prep time of the item.
 	 * @generated
 	 */
 	public MenuItem(String itemName, int itemPrice, int itemPrepTime){
@@ -65,6 +78,7 @@ public class MenuItem
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
 		this.itemPrepTime = itemPrepTime;
+                this.orderCount = 1;
 	}
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,5 +150,18 @@ public class MenuItem
 	public void setItemPrepTime(int itemPrepTime) {
 		this.itemPrepTime = itemPrepTime;
 	}
+
+        /**
+	 * <!-- begin-user-doc -->
+	 * Returns the number of times a dish was ordered.
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+        
+        public int getOrderCount()
+        {
+            return this.orderCount;
+        }
 
 }

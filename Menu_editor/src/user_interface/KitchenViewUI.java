@@ -78,6 +78,8 @@ public class KitchenViewUI extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
 
         removeOrderButton2.setBackground(new java.awt.Color(0, 0, 200));
+        removeOrderButton2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        removeOrderButton2.setForeground(new java.awt.Color(255, 255, 255));
         removeOrderButton2.setText("Remove Item");
         removeOrderButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +107,8 @@ public class KitchenViewUI extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(0, 0, 0));
 
         removeOrderButton1.setBackground(new java.awt.Color(0, 0, 200));
+        removeOrderButton1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        removeOrderButton1.setForeground(new java.awt.Color(255, 255, 255));
         removeOrderButton1.setText("Remove Item");
         removeOrderButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,6 +136,8 @@ public class KitchenViewUI extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(0, 0, 0));
 
         removeOrderButton3.setBackground(new java.awt.Color(0, 0, 200));
+        removeOrderButton3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        removeOrderButton3.setForeground(new java.awt.Color(255, 255, 255));
         removeOrderButton3.setText("Remove Item");
         removeOrderButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,6 +165,8 @@ public class KitchenViewUI extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
 
         removeOrderButton4.setBackground(new java.awt.Color(0, 0, 200));
+        removeOrderButton4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        removeOrderButton4.setForeground(new java.awt.Color(255, 255, 255));
         removeOrderButton4.setText("Remove Item");
         removeOrderButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,6 +194,8 @@ public class KitchenViewUI extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(0, 0, 0));
 
         removeOrderButton5.setBackground(new java.awt.Color(0, 0, 200));
+        removeOrderButton5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        removeOrderButton5.setForeground(new java.awt.Color(255, 255, 255));
         removeOrderButton5.setText("Remove Item");
         removeOrderButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

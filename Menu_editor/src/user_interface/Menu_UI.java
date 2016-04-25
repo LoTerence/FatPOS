@@ -14,6 +14,9 @@ public class Menu_UI extends javax.swing.JFrame {
 
     /**
      * Creates new form Menu_UI
+     * @param kitchenView reference to the kitchen view so the order page can communocate with the kitchen
+     * when an order is placed.
+     * @param start allows the user to go back to the start menu when the order menu closes.
      */
     public Menu_UI(KitchenViewUI kitchenView, StartMenu_UI start) {
         initComponents();
@@ -127,6 +130,7 @@ public class Menu_UI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setPreferredSize(new java.awt.Dimension(1500, 775));
 
         menu = new Menu();
         menu.initializeCategories(8);
@@ -142,6 +146,7 @@ public class Menu_UI extends javax.swing.JFrame {
         categoy1Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         categoy1Label.setText(categoryName1);
 
+        //category1Button1.setVisible(true);
         category1Button1.setBackground(new java.awt.Color(0, 0, 200));
         menu.categoryArray[0].itemList[0].setItemName("Eggs");
         String catText1_1 = menu.categoryArray[0].itemList[0].getItemName();
@@ -174,7 +179,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category1Button2.setBackground(new java.awt.Color(0, 0, 200));
         category1Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button2.setForeground(new java.awt.Color(255, 255, 255));
-        category1Button2.setText("jButton1");
+        category1Button2.setText(catText1_2);
         category1Button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category1Button2ActionPerformed(evt);
@@ -193,7 +198,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category1Button3.setBackground(new java.awt.Color(0, 0, 200));
         category1Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button3.setForeground(new java.awt.Color(255, 255, 255));
-        category1Button3.setText("jButton1");
+        category1Button3.setText(catText1_3);
         category1Button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category1Button3ActionPerformed(evt);
@@ -212,7 +217,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category1Button4.setBackground(new java.awt.Color(0, 0, 200));
         category1Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button4.setForeground(new java.awt.Color(255, 255, 255));
-        category1Button4.setText("jButton1");
+        category1Button4.setText(catText1_4);
         category1Button4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category1Button4ActionPerformed(evt);
@@ -231,7 +236,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category1Button5.setBackground(new java.awt.Color(0, 0, 200));
         category1Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button5.setForeground(new java.awt.Color(255, 255, 255));
-        category1Button5.setText("jButton1");
+        category1Button5.setText(catText1_5);
         category1Button5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category1Button5ActionPerformed(evt);
@@ -250,7 +255,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category1Button6.setBackground(new java.awt.Color(0, 0, 200));
         category1Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button6.setForeground(new java.awt.Color(255, 255, 255));
-        category1Button6.setText("jButton1");
+        category1Button6.setText(catText1_6);
         category1Button6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category1Button6ActionPerformed(evt);
@@ -269,7 +274,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category1Button7.setBackground(new java.awt.Color(0, 0, 200));
         category1Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button7.setForeground(new java.awt.Color(255, 255, 255));
-        category1Button7.setText("jButton1");
+        category1Button7.setText(catText1_7);
         category1Button7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category1Button7ActionPerformed(evt);
@@ -288,7 +293,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category1Button8.setBackground(new java.awt.Color(0, 0, 200));
         category1Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button8.setForeground(new java.awt.Color(255, 255, 255));
-        category1Button8.setText("jButton1");
+        category1Button8.setText(catText1_8);
         category1Button8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category1Button8ActionPerformed(evt);
@@ -338,6 +343,7 @@ public class Menu_UI extends javax.swing.JFrame {
         );
 
         placeOrderButton.setBackground(new java.awt.Color(0, 0, 200));
+        placeOrderButton.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         placeOrderButton.setForeground(new java.awt.Color(255, 255, 255));
         placeOrderButton.setText("Place Order");
         placeOrderButton.addActionListener(new java.awt.event.ActionListener() {
@@ -347,6 +353,7 @@ public class Menu_UI extends javax.swing.JFrame {
         });
 
         removeItemButton.setBackground(new java.awt.Color(0, 0, 200));
+        removeItemButton.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         removeItemButton.setForeground(new java.awt.Color(255, 255, 255));
         removeItemButton.setText("Remove Item");
         removeItemButton.addActionListener(new java.awt.event.ActionListener() {
@@ -376,7 +383,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category2Button1.setBackground(new java.awt.Color(0, 0, 200));
         category2Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button1.setForeground(new java.awt.Color(255, 255, 255));
-        category2Button1.setText("jButton1");
+        category2Button1.setText(catText2_1);
         category2Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category2Button1ActionPerformed(evt);
@@ -395,7 +402,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category2Button2.setBackground(new java.awt.Color(0, 0, 200));
         category2Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button2.setForeground(new java.awt.Color(255, 255, 255));
-        category2Button2.setText("jButton1");
+        category2Button2.setText(catText2_2);
         category2Button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category2Button2ActionPerformed(evt);
@@ -414,7 +421,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category2Button3.setBackground(new java.awt.Color(0, 0, 200));
         category2Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button3.setForeground(new java.awt.Color(255, 255, 255));
-        category2Button3.setText("jButton1");
+        category2Button3.setText(catText2_3);
         category2Button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category2Button3ActionPerformed(evt);
@@ -422,7 +429,7 @@ public class Menu_UI extends javax.swing.JFrame {
         });
 
         String catText2_4 = menu.categoryArray[1].itemList[3].getItemName();
-        if(catText2_1.equals(""))
+        if(catText2_4.equals(""))
         {
             category2Button4.setVisible(false);
         }
@@ -433,7 +440,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category2Button4.setBackground(new java.awt.Color(0, 0, 200));
         category2Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button4.setForeground(new java.awt.Color(255, 255, 255));
-        category2Button4.setText("jButton1");
+        category2Button4.setText(catText2_4);
         category2Button4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category2Button4ActionPerformed(evt);
@@ -452,7 +459,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category2Button5.setBackground(new java.awt.Color(0, 0, 200));
         category2Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button5.setForeground(new java.awt.Color(255, 255, 255));
-        category2Button5.setText("jButton1");
+        category2Button5.setText(catText2_5);
         category2Button5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category2Button5ActionPerformed(evt);
@@ -471,7 +478,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category2Button6.setBackground(new java.awt.Color(0, 0, 200));
         category2Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button6.setForeground(new java.awt.Color(255, 255, 255));
-        category2Button6.setText("jButton1");
+        category2Button6.setText(catText2_6);
         category2Button6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category2Button6ActionPerformed(evt);
@@ -490,7 +497,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category2Button7.setBackground(new java.awt.Color(0, 0, 200));
         category2Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button7.setForeground(new java.awt.Color(255, 255, 255));
-        category2Button7.setText("jButton1");
+        category2Button7.setText(catText2_7);
         category2Button7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category2Button7ActionPerformed(evt);
@@ -509,7 +516,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category2Button8.setBackground(new java.awt.Color(0, 0, 200));
         category2Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button8.setForeground(new java.awt.Color(255, 255, 255));
-        category2Button8.setText("jButton1");
+        category2Button8.setText(catText2_8);
         category2Button8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category2Button8ActionPerformed(evt);
@@ -581,7 +588,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category3Button1.setBackground(new java.awt.Color(0, 0, 200));
         category3Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button1.setForeground(new java.awt.Color(255, 255, 255));
-        category3Button1.setText("jButton1");
+        category3Button1.setText(catText3_1);
         category3Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category3Button1ActionPerformed(evt);
@@ -600,7 +607,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category3Button2.setBackground(new java.awt.Color(0, 0, 200));
         category3Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button2.setForeground(new java.awt.Color(255, 255, 255));
-        category3Button2.setText("jButton1");
+        category3Button2.setText(catText3_2);
         category3Button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category3Button2ActionPerformed(evt);
@@ -619,7 +626,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category3Button3.setBackground(new java.awt.Color(0, 0, 200));
         category3Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button3.setForeground(new java.awt.Color(255, 255, 255));
-        category3Button3.setText("jButton1");
+        category3Button3.setText(catText3_3);
         category3Button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category3Button3ActionPerformed(evt);
@@ -638,7 +645,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category3Button4.setBackground(new java.awt.Color(0, 0, 200));
         category3Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button4.setForeground(new java.awt.Color(255, 255, 255));
-        category3Button4.setText("jButton1");
+        category3Button4.setText(catText3_4);
         category3Button4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category3Button4ActionPerformed(evt);
@@ -657,7 +664,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category3Button5.setBackground(new java.awt.Color(0, 0, 200));
         category3Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button5.setForeground(new java.awt.Color(255, 255, 255));
-        category3Button5.setText("jButton1");
+        category3Button5.setText(catText3_5);
         category3Button5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category3Button5ActionPerformed(evt);
@@ -676,7 +683,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category3Button6.setBackground(new java.awt.Color(0, 0, 200));
         category3Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button6.setForeground(new java.awt.Color(255, 255, 255));
-        category3Button6.setText("jButton1");
+        category3Button6.setText(catText3_6);
         category3Button6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category3Button6ActionPerformed(evt);
@@ -695,7 +702,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category3Button7.setBackground(new java.awt.Color(0, 0, 200));
         category3Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button7.setForeground(new java.awt.Color(255, 255, 255));
-        category3Button7.setText("jButton1");
+        category3Button7.setText(catText3_7);
         category3Button7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category3Button7ActionPerformed(evt);
@@ -714,7 +721,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category3Button8.setBackground(new java.awt.Color(0, 0, 200));
         category3Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button8.setForeground(new java.awt.Color(255, 255, 255));
-        category3Button8.setText("jButton1");
+        category3Button8.setText(catText3_8);
         category3Button8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category3Button8ActionPerformed(evt);
@@ -786,7 +793,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category4Button1.setBackground(new java.awt.Color(0, 0, 200));
         category4Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button1.setForeground(new java.awt.Color(255, 255, 255));
-        category4Button1.setText("jButton1");
+        category4Button1.setText(catText4_1);
         category4Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category4Button1ActionPerformed(evt);
@@ -805,7 +812,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category4Button2.setBackground(new java.awt.Color(0, 0, 200));
         category4Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button2.setForeground(new java.awt.Color(255, 255, 255));
-        category4Button2.setText("jButton1");
+        category4Button2.setText(catText4_2);
         category4Button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category4Button2ActionPerformed(evt);
@@ -824,7 +831,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category4Button3.setBackground(new java.awt.Color(0, 0, 200));
         category4Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button3.setForeground(new java.awt.Color(255, 255, 255));
-        category4Button3.setText("jButton1");
+        category4Button3.setText(catText4_3);
         category4Button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category4Button3ActionPerformed(evt);
@@ -843,7 +850,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category4Button4.setBackground(new java.awt.Color(0, 0, 200));
         category4Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button4.setForeground(new java.awt.Color(255, 255, 255));
-        category4Button4.setText("jButton1");
+        category4Button4.setText(catText4_4);
         category4Button4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category4Button4ActionPerformed(evt);
@@ -862,7 +869,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category4Button5.setBackground(new java.awt.Color(0, 0, 200));
         category4Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button5.setForeground(new java.awt.Color(255, 255, 255));
-        category4Button5.setText("jButton1");
+        category4Button5.setText(catText4_5);
         category4Button5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category4Button5ActionPerformed(evt);
@@ -881,7 +888,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category4Button6.setBackground(new java.awt.Color(0, 0, 200));
         category4Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button6.setForeground(new java.awt.Color(255, 255, 255));
-        category4Button6.setText("jButton1");
+        category4Button6.setText(catText4_6);
         category4Button6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category4Button6ActionPerformed(evt);
@@ -900,7 +907,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category4Button7.setBackground(new java.awt.Color(0, 0, 200));
         category4Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button7.setForeground(new java.awt.Color(255, 255, 255));
-        category4Button7.setText("jButton1");
+        category4Button7.setText(catText4_7);
         category4Button7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category4Button7ActionPerformed(evt);
@@ -919,7 +926,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category4Button8.setBackground(new java.awt.Color(0, 0, 200));
         category4Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button8.setForeground(new java.awt.Color(255, 255, 255));
-        category4Button8.setText("jButton1");
+        category4Button8.setText(catText4_8);
         category4Button8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category4Button8ActionPerformed(evt);
@@ -991,7 +998,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category5Button1.setBackground(new java.awt.Color(0, 0, 200));
         category5Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button1.setForeground(new java.awt.Color(255, 255, 255));
-        category5Button1.setText("jButton1");
+        category5Button1.setText(catText5_1);
         category5Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category5Button1ActionPerformed(evt);
@@ -1010,7 +1017,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category5Button2.setBackground(new java.awt.Color(0, 0, 200));
         category5Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button2.setForeground(new java.awt.Color(255, 255, 255));
-        category5Button2.setText("jButton1");
+        category5Button2.setText(catText5_2);
         category5Button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category5Button2ActionPerformed(evt);
@@ -1029,7 +1036,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category5Button3.setBackground(new java.awt.Color(0, 0, 200));
         category5Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button3.setForeground(new java.awt.Color(255, 255, 255));
-        category5Button3.setText("jButton1");
+        category5Button3.setText(catText5_3);
         category5Button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category5Button3ActionPerformed(evt);
@@ -1048,7 +1055,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category5Button4.setBackground(new java.awt.Color(0, 0, 200));
         category5Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button4.setForeground(new java.awt.Color(255, 255, 255));
-        category5Button4.setText("jButton1");
+        category5Button4.setText(catText5_4);
         category5Button4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category5Button4ActionPerformed(evt);
@@ -1067,7 +1074,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category5Button5.setBackground(new java.awt.Color(0, 0, 200));
         category5Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button5.setForeground(new java.awt.Color(255, 255, 255));
-        category5Button5.setText("jButton1");
+        category5Button5.setText(catText5_5);
         category5Button5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category5Button5ActionPerformed(evt);
@@ -1086,7 +1093,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category5Button6.setBackground(new java.awt.Color(0, 0, 200));
         category5Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button6.setForeground(new java.awt.Color(255, 255, 255));
-        category5Button6.setText("jButton1");
+        category5Button6.setText(catText5_6);
         category5Button6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category5Button6ActionPerformed(evt);
@@ -1105,7 +1112,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category5Button7.setBackground(new java.awt.Color(0, 0, 200));
         category5Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button7.setForeground(new java.awt.Color(255, 255, 255));
-        category5Button7.setText("jButton1");
+        category5Button7.setText(catText5_7);
         category5Button7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category5Button7ActionPerformed(evt);
@@ -1124,7 +1131,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category5Button8.setBackground(new java.awt.Color(0, 0, 200));
         category5Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button8.setForeground(new java.awt.Color(255, 255, 255));
-        category5Button8.setText("jButton1");
+        category5Button8.setText(catText5_8);
         category5Button8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category5Button8ActionPerformed(evt);
@@ -1194,7 +1201,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category6Button1.setBackground(new java.awt.Color(0, 0, 200));
         category6Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button1.setForeground(new java.awt.Color(255, 255, 255));
-        category6Button1.setText("jButton1");
+        category6Button1.setText(catText6_1);
         category6Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category6Button1ActionPerformed(evt);
@@ -1213,7 +1220,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category6Button2.setBackground(new java.awt.Color(0, 0, 200));
         category6Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button2.setForeground(new java.awt.Color(255, 255, 255));
-        category6Button2.setText("jButton1");
+        category6Button2.setText(catText6_2);
         category6Button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category6Button2ActionPerformed(evt);
@@ -1232,7 +1239,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category6Button3.setBackground(new java.awt.Color(0, 0, 200));
         category6Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button3.setForeground(new java.awt.Color(255, 255, 255));
-        category6Button3.setText("jButton1");
+        category6Button3.setText(catText6_3);
         category6Button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category6Button3ActionPerformed(evt);
@@ -1251,7 +1258,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category6Button4.setBackground(new java.awt.Color(0, 0, 200));
         category6Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button4.setForeground(new java.awt.Color(255, 255, 255));
-        category6Button4.setText("jButton1");
+        category6Button4.setText(catText6_4);
         category6Button4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category6Button4ActionPerformed(evt);
@@ -1270,7 +1277,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category6Button5.setBackground(new java.awt.Color(0, 0, 200));
         category6Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button5.setForeground(new java.awt.Color(255, 255, 255));
-        category6Button5.setText("jButton1");
+        category6Button5.setText(catText6_5);
         category6Button5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category6Button5ActionPerformed(evt);
@@ -1289,7 +1296,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category6Button6.setBackground(new java.awt.Color(0, 0, 200));
         category6Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button6.setForeground(new java.awt.Color(255, 255, 255));
-        category6Button6.setText("jButton1");
+        category6Button6.setText(catText6_6);
         category6Button6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category6Button6ActionPerformed(evt);
@@ -1308,7 +1315,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category6Button7.setBackground(new java.awt.Color(0, 0, 200));
         category6Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button7.setForeground(new java.awt.Color(255, 255, 255));
-        category6Button7.setText("jButton1");
+        category6Button7.setText(catText6_7);
         category6Button7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category6Button7ActionPerformed(evt);
@@ -1327,7 +1334,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category6Button8.setBackground(new java.awt.Color(0, 0, 200));
         category6Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button8.setForeground(new java.awt.Color(255, 255, 255));
-        category6Button8.setText("jButton1");
+        category6Button8.setText(catText6_8);
         category6Button8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category6Button8ActionPerformed(evt);
@@ -1399,7 +1406,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category7Button1.setBackground(new java.awt.Color(0, 0, 200));
         category7Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button1.setForeground(new java.awt.Color(255, 255, 255));
-        category7Button1.setText("jButton1");
+        category7Button1.setText(catText7_1);
         category7Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category7Button1ActionPerformed(evt);
@@ -1418,7 +1425,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category7Button2.setBackground(new java.awt.Color(0, 0, 200));
         category7Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button2.setForeground(new java.awt.Color(255, 255, 255));
-        category7Button2.setText("jButton1");
+        category7Button2.setText(catText7_2);
         category7Button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category7Button2ActionPerformed(evt);
@@ -1437,7 +1444,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category7Button3.setBackground(new java.awt.Color(0, 0, 200));
         category7Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button3.setForeground(new java.awt.Color(255, 255, 255));
-        category7Button3.setText("jButton1");
+        category7Button3.setText(catText7_3);
         category7Button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category7Button3ActionPerformed(evt);
@@ -1456,7 +1463,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category7Button4.setBackground(new java.awt.Color(0, 0, 200));
         category7Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button4.setForeground(new java.awt.Color(255, 255, 255));
-        category7Button4.setText("jButton1");
+        category7Button4.setText(catText7_4);
         category7Button4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category7Button4ActionPerformed(evt);
@@ -1475,7 +1482,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category7Button5.setBackground(new java.awt.Color(0, 0, 200));
         category7Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button5.setForeground(new java.awt.Color(255, 255, 255));
-        category7Button5.setText("jButton1");
+        category7Button5.setText(catText7_5);
         category7Button5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category7Button5ActionPerformed(evt);
@@ -1494,7 +1501,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category7Button6.setBackground(new java.awt.Color(0, 0, 200));
         category7Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button6.setForeground(new java.awt.Color(255, 255, 255));
-        category7Button6.setText("jButton1");
+        category7Button6.setText(catText7_6);
         category7Button6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category7Button6ActionPerformed(evt);
@@ -1513,7 +1520,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category7Button7.setBackground(new java.awt.Color(0, 0, 200));
         category7Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button7.setForeground(new java.awt.Color(255, 255, 255));
-        category7Button7.setText("jButton1");
+        category7Button7.setText(catText7_7);
         category7Button7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category7Button7ActionPerformed(evt);
@@ -1532,7 +1539,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category7Button8.setBackground(new java.awt.Color(0, 0, 200));
         category7Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button8.setForeground(new java.awt.Color(255, 255, 255));
-        category7Button8.setText("jButton1");
+        category7Button8.setText(catText7_8);
         category7Button8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category7Button8ActionPerformed(evt);
@@ -1604,7 +1611,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category8Button1.setBackground(new java.awt.Color(0, 0, 200));
         category8Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button1.setForeground(new java.awt.Color(255, 255, 255));
-        category8Button1.setText("jButton1");
+        category8Button1.setText(catText8_1);
         category8Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category8Button1ActionPerformed(evt);
@@ -1623,7 +1630,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category8Button2.setBackground(new java.awt.Color(0, 0, 200));
         category8Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button2.setForeground(new java.awt.Color(255, 255, 255));
-        category8Button2.setText("jButton1");
+        category8Button2.setText(catText8_2);
         category8Button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category8Button2ActionPerformed(evt);
@@ -1642,7 +1649,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category8Button3.setBackground(new java.awt.Color(0, 0, 200));
         category8Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button3.setForeground(new java.awt.Color(255, 255, 255));
-        category8Button3.setText("jButton1");
+        category8Button3.setText(catText8_3);
         category8Button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category8Button3ActionPerformed(evt);
@@ -1661,7 +1668,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category8Button4.setBackground(new java.awt.Color(0, 0, 200));
         category8Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button4.setForeground(new java.awt.Color(255, 255, 255));
-        category8Button4.setText("jButton1");
+        category8Button4.setText(catText8_4);
         category8Button4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category8Button4ActionPerformed(evt);
@@ -1680,7 +1687,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category8Button5.setBackground(new java.awt.Color(0, 0, 200));
         category8Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button5.setForeground(new java.awt.Color(255, 255, 255));
-        category8Button5.setText("jButton1");
+        category8Button5.setText(catText8_5);
         category8Button5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category8Button5ActionPerformed(evt);
@@ -1699,7 +1706,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category8Button6.setBackground(new java.awt.Color(0, 0, 200));
         category8Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button6.setForeground(new java.awt.Color(255, 255, 255));
-        category8Button6.setText("jButton1");
+        category8Button6.setText(catText8_6);
         category8Button6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category8Button6ActionPerformed(evt);
@@ -1718,7 +1725,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category8Button7.setBackground(new java.awt.Color(0, 0, 200));
         category8Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button7.setForeground(new java.awt.Color(255, 255, 255));
-        category8Button7.setText("jButton1");
+        category8Button7.setText(catText8_7);
         category8Button7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category8Button7ActionPerformed(evt);
@@ -1737,7 +1744,7 @@ public class Menu_UI extends javax.swing.JFrame {
         category8Button8.setBackground(new java.awt.Color(0, 0, 200));
         category8Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button8.setForeground(new java.awt.Color(255, 255, 255));
-        category8Button8.setText("jButton1");
+        category8Button8.setText(catText8_8);
         category8Button8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category8Button8ActionPerformed(evt);
@@ -1906,17 +1913,58 @@ public class Menu_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_category1Button2ActionPerformed
 
     private void placeOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeOrderButtonActionPerformed
+        //The total cost of the orer. This will be added to the total profit in the database.
+        int orderTotal = 0;
+        //The total amount of item preparation time for all items in the order.
+        //This will be added to the total preparation time in the database.
+        int totalPrepTime = 0;
+        //Used to store the order count.
+        int itemOrderCount = 0;
+        //Preents the database from being updated when the order list is full.
+        if(getListModel().getSize() < 5)
+        {
+            //Temporarily holds a menu item object.
+            MenuItem item;
+            for(int i = 0; i < getListModel().getSize(); i++)
+            {
+                //Get a reference to the item from the orderlist.
+                item = order.getItem(i);
+                //Fetch the item prep time and add it to totalPrepTime
+                totalPrepTime += item.getItemPrepTime();
+                //Retrieve the item order count.
+                itemOrderCount = item.getOrderCount();
+                 /*
+                DATABASE!!! Use itemOrderCount to set the new order count in the database to what this 
+                            method returns.
+                */
+            }
+            //Get the total cost from the place order button text.
+            orderTotal = Integer.parseInt(orderTotalLabel1.getText());
+            /*
+            DATABASE!!! USE totalItemPrepTime and orderTotal to add
+                         to the values stored in the database.
+            */
+        }
+        
+        
         //Sends the order to the kitchen by adding the order to the list of orders for the kitchen to see.
         order.sendToKitchen();
         kitchenUI.addOrderToEmptyJList(getListModel());
+
         //Hide the order window.
         frame.setVisible(false);
+<<<<<<< HEAD
 /* <<<<<<< HEAD
 =======
         //Return to the start menu.
         startmenu.setVisible(true);
 >>>>>>> refs/remotes/origin/master
        // kitchenUI.setVisible(true); */
+=======
+        //Return to the start menu.
+        startmenu.setVisible(true);
+       // kitchenUI.setVisible(true);
+>>>>>>> refs/remotes/origin/master
     }//GEN-LAST:event_placeOrderButtonActionPerformed
 
     private void category1Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_category1Button3ActionPerformed
