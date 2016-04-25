@@ -126,7 +126,6 @@ public class Menu_UI extends javax.swing.JFrame {
         orderJList = new javax.swing.JList<>();
 
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(1500, 775));
 
         menu = new Menu();
         menu.initializeCategories(8);
@@ -142,11 +141,10 @@ public class Menu_UI extends javax.swing.JFrame {
         categoy1Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         categoy1Label.setText(categoryName1);
 
-        //category1Button1.setVisible(true);
         category1Button1.setBackground(new java.awt.Color(0, 0, 200));
         menu.categoryArray[0].itemList[0].setItemName("Eggs");
-        String catText11 = menu.categoryArray[0].itemList[0].getItemName();
-        if(catText11.equals(""))
+        String catText1_1 = menu.categoryArray[0].itemList[0].getItemName();
+        if(catText1_1.equals(""))
         {
             category1Button1.setVisible(false);
         }
@@ -156,14 +154,22 @@ public class Menu_UI extends javax.swing.JFrame {
         }
         category1Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button1.setForeground(new java.awt.Color(255, 255, 255));
-        category1Button1.setText(catText11);
+        category1Button1.setText(catText1_1);
         category1Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category1Button1ActionPerformed(evt);
             }
         });
 
-        //category1Button2.setVisible(true);
+        String catText1_2 = menu.categoryArray[0].itemList[1].getItemName();
+        if(catText1_2.equals(""))
+        {
+            category1Button2.setVisible(false);
+        }
+        else
+        {
+            category1Button2.setVisible(true);
+        }
         category1Button2.setBackground(new java.awt.Color(0, 0, 200));
         category1Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button2.setForeground(new java.awt.Color(255, 255, 255));
@@ -174,7 +180,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category1Button3.setVisible(true);
+        String catText1_3 = menu.categoryArray[0].itemList[2].getItemName();
+        if(catText1_3.equals(""))
+        {
+            category1Button3.setVisible(false);
+        }
+        else
+        {
+            category1Button3.setVisible(true);
+        }
         category1Button3.setBackground(new java.awt.Color(0, 0, 200));
         category1Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button3.setForeground(new java.awt.Color(255, 255, 255));
@@ -185,7 +199,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category1Button4.setVisible(true);
+        String catText1_4 = menu.categoryArray[0].itemList[3].getItemName();
+        if(catText1_4.equals(""))
+        {
+            category1Button4.setVisible(false);
+        }
+        else
+        {
+            category1Button4.setVisible(true);
+        }
         category1Button4.setBackground(new java.awt.Color(0, 0, 200));
         category1Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button4.setForeground(new java.awt.Color(255, 255, 255));
@@ -196,7 +218,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category1Button5.setVisible(true);
+        String catText1_5 = menu.categoryArray[0].itemList[4].getItemName();
+        if(catText1_5.equals(""))
+        {
+            category1Button5.setVisible(false);
+        }
+        else
+        {
+            category1Button5.setVisible(true);
+        }
         category1Button5.setBackground(new java.awt.Color(0, 0, 200));
         category1Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button5.setForeground(new java.awt.Color(255, 255, 255));
@@ -207,7 +237,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category1Button6.setVisible(false);
+        String catText1_6 = menu.categoryArray[0].itemList[5].getItemName();
+        if(catText1_6.equals(""))
+        {
+            category1Button6.setVisible(false);
+        }
+        else
+        {
+            category1Button6.setVisible(true);
+        }
         category1Button6.setBackground(new java.awt.Color(0, 0, 200));
         category1Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button6.setForeground(new java.awt.Color(255, 255, 255));
@@ -218,7 +256,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category1Button1.setVisible(false);
+        String catText1_7 = menu.categoryArray[0].itemList[6].getItemName();
+        if(catText1_7.equals(""))
+        {
+            category1Button7.setVisible(false);
+        }
+        else
+        {
+            category1Button7.setVisible(true);
+        }
         category1Button7.setBackground(new java.awt.Color(0, 0, 200));
         category1Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button7.setForeground(new java.awt.Color(255, 255, 255));
@@ -229,7 +275,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category1Button8.setVisible(false);
+        String catText1_8 = menu.categoryArray[0].itemList[7].getItemName();
+        if(catText1_8.equals(""))
+        {
+            category1Button8.setVisible(false);
+        }
+        else
+        {
+            category1Button8.setVisible(true);
+        }
         category1Button8.setBackground(new java.awt.Color(0, 0, 200));
         category1Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category1Button8.setForeground(new java.awt.Color(255, 255, 255));
@@ -309,7 +363,15 @@ public class Menu_UI extends javax.swing.JFrame {
         categoyLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         categoyLabel1.setText(categoryName2);
 
-        //category2Button1.setVisible(true);
+        String catText2_1 = menu.categoryArray[1].itemList[0].getItemName();
+        if(catText2_1.equals(""))
+        {
+            category2Button1.setVisible(false);
+        }
+        else
+        {
+            category2Button1.setVisible(true);
+        }
         category2Button1.setBackground(new java.awt.Color(0, 0, 200));
         category2Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button1.setForeground(new java.awt.Color(255, 255, 255));
@@ -320,7 +382,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category2Button2.setVisible(false);
+        String catText2_2 = menu.categoryArray[1].itemList[1].getItemName();
+        if(catText2_2.equals(""))
+        {
+            category2Button2.setVisible(false);
+        }
+        else
+        {
+            category2Button2.setVisible(true);
+        }
         category2Button2.setBackground(new java.awt.Color(0, 0, 200));
         category2Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button2.setForeground(new java.awt.Color(255, 255, 255));
@@ -331,7 +401,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category2Button3.setVisible(false);
+        String catText2_3 = menu.categoryArray[1].itemList[2].getItemName();
+        if(catText2_3.equals(""))
+        {
+            category2Button3.setVisible(false);
+        }
+        else
+        {
+            category2Button3.setVisible(true);
+        }
         category2Button3.setBackground(new java.awt.Color(0, 0, 200));
         category2Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button3.setForeground(new java.awt.Color(255, 255, 255));
@@ -342,7 +420,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category2Button4.setVisible(false);
+        String catText2_4 = menu.categoryArray[1].itemList[3].getItemName();
+        if(catText2_1.equals(""))
+        {
+            category2Button4.setVisible(false);
+        }
+        else
+        {
+            category2Button4.setVisible(true);
+        }
         category2Button4.setBackground(new java.awt.Color(0, 0, 200));
         category2Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button4.setForeground(new java.awt.Color(255, 255, 255));
@@ -353,7 +439,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category2Button5.setVisible(false);
+        String catText2_5 = menu.categoryArray[1].itemList[4].getItemName();
+        if(catText2_5.equals(""))
+        {
+            category2Button5.setVisible(false);
+        }
+        else
+        {
+            category2Button5.setVisible(true);
+        }
         category2Button5.setBackground(new java.awt.Color(0, 0, 200));
         category2Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button5.setForeground(new java.awt.Color(255, 255, 255));
@@ -364,7 +458,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category2Button6.setVisible(false);
+        String catText2_6 = menu.categoryArray[1].itemList[5].getItemName();
+        if(catText2_6.equals(""))
+        {
+            category2Button6.setVisible(false);
+        }
+        else
+        {
+            category2Button6.setVisible(true);
+        }
         category2Button6.setBackground(new java.awt.Color(0, 0, 200));
         category2Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button6.setForeground(new java.awt.Color(255, 255, 255));
@@ -375,7 +477,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category2Button7.setVisible(false);
+        String catText2_7 = menu.categoryArray[1].itemList[6].getItemName();
+        if(catText2_7.equals(""))
+        {
+            category2Button7.setVisible(false);
+        }
+        else
+        {
+            category2Button7.setVisible(true);
+        }
         category2Button7.setBackground(new java.awt.Color(0, 0, 200));
         category2Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button7.setForeground(new java.awt.Color(255, 255, 255));
@@ -386,7 +496,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category2Button8.setVisible(false);
+        String catText2_8 = menu.categoryArray[1].itemList[7].getItemName();
+        if(catText2_8.equals(""))
+        {
+            category2Button8.setVisible(false);
+        }
+        else
+        {
+            category2Button8.setVisible(true);
+        }
         category2Button8.setBackground(new java.awt.Color(0, 0, 200));
         category2Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category2Button8.setForeground(new java.awt.Color(255, 255, 255));
@@ -450,7 +568,15 @@ public class Menu_UI extends javax.swing.JFrame {
         categoyLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         categoyLabel2.setText(categoryName3);
 
-        //category3Button1.setVisible(true);
+        String catText3_1 = menu.categoryArray[2].itemList[0].getItemName();
+        if(catText3_1.equals(""))
+        {
+            category3Button1.setVisible(false);
+        }
+        else
+        {
+            category3Button1.setVisible(true);
+        }
         category3Button1.setBackground(new java.awt.Color(0, 0, 200));
         category3Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button1.setForeground(new java.awt.Color(255, 255, 255));
@@ -461,7 +587,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category3Button2.setVisible(false);
+        String catText3_2 = menu.categoryArray[2].itemList[1].getItemName();
+        if(catText3_2.equals(""))
+        {
+            category3Button2.setVisible(false);
+        }
+        else
+        {
+            category3Button2.setVisible(true);
+        }
         category3Button2.setBackground(new java.awt.Color(0, 0, 200));
         category3Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button2.setForeground(new java.awt.Color(255, 255, 255));
@@ -472,7 +606,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category13Button3.setVisible(false);
+        String catText3_3 = menu.categoryArray[2].itemList[2].getItemName();
+        if(catText3_3.equals(""))
+        {
+            category3Button3.setVisible(false);
+        }
+        else
+        {
+            category3Button3.setVisible(true);
+        }
         category3Button3.setBackground(new java.awt.Color(0, 0, 200));
         category3Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button3.setForeground(new java.awt.Color(255, 255, 255));
@@ -483,7 +625,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category3Button4.setVisible(false);
+        String catText3_4 = menu.categoryArray[2].itemList[3].getItemName();
+        if(catText3_4.equals(""))
+        {
+            category3Button4.setVisible(false);
+        }
+        else
+        {
+            category3Button4.setVisible(true);
+        }
         category3Button4.setBackground(new java.awt.Color(0, 0, 200));
         category3Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button4.setForeground(new java.awt.Color(255, 255, 255));
@@ -494,7 +644,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category3Button5.setVisible(false);
+        String catText3_5 = menu.categoryArray[2].itemList[4].getItemName();
+        if(catText3_5.equals(""))
+        {
+            category3Button5.setVisible(false);
+        }
+        else
+        {
+            category3Button5.setVisible(true);
+        }
         category3Button5.setBackground(new java.awt.Color(0, 0, 200));
         category3Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button5.setForeground(new java.awt.Color(255, 255, 255));
@@ -505,7 +663,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category3Button6.setVisible(false);
+        String catText3_6 = menu.categoryArray[2].itemList[5].getItemName();
+        if(catText3_6.equals(""))
+        {
+            category3Button6.setVisible(false);
+        }
+        else
+        {
+            category3Button6.setVisible(true);
+        }
         category3Button6.setBackground(new java.awt.Color(0, 0, 200));
         category3Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button6.setForeground(new java.awt.Color(255, 255, 255));
@@ -516,7 +682,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category3Button7.setVisible(false);
+        String catText3_7 = menu.categoryArray[2].itemList[6].getItemName();
+        if(catText3_7.equals(""))
+        {
+            category3Button7.setVisible(false);
+        }
+        else
+        {
+            category3Button7.setVisible(true);
+        }
         category3Button7.setBackground(new java.awt.Color(0, 0, 200));
         category3Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button7.setForeground(new java.awt.Color(255, 255, 255));
@@ -527,7 +701,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category3Button8.setVisible(false);
+        String catText3_8 = menu.categoryArray[2].itemList[7].getItemName();
+        if(catText3_8.equals(""))
+        {
+            category3Button8.setVisible(false);
+        }
+        else
+        {
+            category3Button8.setVisible(true);
+        }
         category3Button8.setBackground(new java.awt.Color(0, 0, 200));
         category3Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category3Button8.setForeground(new java.awt.Color(255, 255, 255));
@@ -591,7 +773,15 @@ public class Menu_UI extends javax.swing.JFrame {
         categoyLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         categoyLabel3.setText(categoryName4);
 
-        //category4Button1.setVisible(true);
+        String catText4_1 = menu.categoryArray[3].itemList[0].getItemName();
+        if(catText4_1.equals(""))
+        {
+            category4Button1.setVisible(false);
+        }
+        else
+        {
+            category4Button1.setVisible(true);
+        }
         category4Button1.setBackground(new java.awt.Color(0, 0, 200));
         category4Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button1.setForeground(new java.awt.Color(255, 255, 255));
@@ -602,7 +792,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category4Button2.setVisible(false);
+        String catText4_2 = menu.categoryArray[3].itemList[1].getItemName();
+        if(catText4_2.equals(""))
+        {
+            category4Button2.setVisible(false);
+        }
+        else
+        {
+            category4Button2.setVisible(true);
+        }
         category4Button2.setBackground(new java.awt.Color(0, 0, 200));
         category4Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button2.setForeground(new java.awt.Color(255, 255, 255));
@@ -613,7 +811,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category4Button3.setVisible(false);
+        String catText4_3 = menu.categoryArray[3].itemList[2].getItemName();
+        if(catText4_3.equals(""))
+        {
+            category4Button3.setVisible(false);
+        }
+        else
+        {
+            category4Button3.setVisible(true);
+        }
         category4Button3.setBackground(new java.awt.Color(0, 0, 200));
         category4Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button3.setForeground(new java.awt.Color(255, 255, 255));
@@ -624,7 +830,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category4Button4.setVisible(false);
+        String catText4_4 = menu.categoryArray[3].itemList[3].getItemName();
+        if(catText4_4.equals(""))
+        {
+            category4Button4.setVisible(false);
+        }
+        else
+        {
+            category4Button4.setVisible(true);
+        }
         category4Button4.setBackground(new java.awt.Color(0, 0, 200));
         category4Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button4.setForeground(new java.awt.Color(255, 255, 255));
@@ -635,7 +849,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category4Button5.setVisible(false);
+        String catText4_5 = menu.categoryArray[3].itemList[4].getItemName();
+        if(catText4_5.equals(""))
+        {
+            category4Button5.setVisible(false);
+        }
+        else
+        {
+            category4Button5.setVisible(true);
+        }
         category4Button5.setBackground(new java.awt.Color(0, 0, 200));
         category4Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button5.setForeground(new java.awt.Color(255, 255, 255));
@@ -646,7 +868,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category4Button6.setVisible(false);
+        String catText4_6 = menu.categoryArray[3].itemList[5].getItemName();
+        if(catText4_6.equals(""))
+        {
+            category4Button6.setVisible(false);
+        }
+        else
+        {
+            category4Button6.setVisible(true);
+        }
         category4Button6.setBackground(new java.awt.Color(0, 0, 200));
         category4Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button6.setForeground(new java.awt.Color(255, 255, 255));
@@ -657,7 +887,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category4Button7.setVisible(false);
+        String catText4_7 = menu.categoryArray[3].itemList[6].getItemName();
+        if(catText4_7.equals(""))
+        {
+            category4Button7.setVisible(false);
+        }
+        else
+        {
+            category4Button7.setVisible(true);
+        }
         category4Button7.setBackground(new java.awt.Color(0, 0, 200));
         category4Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button7.setForeground(new java.awt.Color(255, 255, 255));
@@ -668,7 +906,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category4Button8.setVisible(false);
+        String catText4_8 = menu.categoryArray[3].itemList[7].getItemName();
+        if(catText4_8.equals(""))
+        {
+            category4Button8.setVisible(false);
+        }
+        else
+        {
+            category4Button8.setVisible(true);
+        }
         category4Button8.setBackground(new java.awt.Color(0, 0, 200));
         category4Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category4Button8.setForeground(new java.awt.Color(255, 255, 255));
@@ -732,7 +978,15 @@ public class Menu_UI extends javax.swing.JFrame {
         categoyLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         categoyLabel4.setText(categoryName5);
 
-        //category5Button1.setVisible(true);
+        String catText5_1 = menu.categoryArray[4].itemList[0].getItemName();
+        if(catText5_1.equals(""))
+        {
+            category5Button1.setVisible(false);
+        }
+        else
+        {
+            category5Button1.setVisible(true);
+        }
         category5Button1.setBackground(new java.awt.Color(0, 0, 200));
         category5Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button1.setForeground(new java.awt.Color(255, 255, 255));
@@ -743,7 +997,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category5Button2.setVisible(false);
+        String catText5_2 = menu.categoryArray[4].itemList[1].getItemName();
+        if(catText5_2.equals(""))
+        {
+            category5Button2.setVisible(false);
+        }
+        else
+        {
+            category5Button2.setVisible(true);
+        }
         category5Button2.setBackground(new java.awt.Color(0, 0, 200));
         category5Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button2.setForeground(new java.awt.Color(255, 255, 255));
@@ -754,7 +1016,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category5Button3.setVisible(false);
+        String catText5_3 = menu.categoryArray[4].itemList[2].getItemName();
+        if(catText5_3.equals(""))
+        {
+            category5Button3.setVisible(false);
+        }
+        else
+        {
+            category5Button3.setVisible(true);
+        }
         category5Button3.setBackground(new java.awt.Color(0, 0, 200));
         category5Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button3.setForeground(new java.awt.Color(255, 255, 255));
@@ -765,7 +1035,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category5Button4.setVisible(false);
+        String catText5_4 = menu.categoryArray[4].itemList[3].getItemName();
+        if(catText5_4.equals(""))
+        {
+            category5Button4.setVisible(false);
+        }
+        else
+        {
+            category5Button4.setVisible(true);
+        }
         category5Button4.setBackground(new java.awt.Color(0, 0, 200));
         category5Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button4.setForeground(new java.awt.Color(255, 255, 255));
@@ -776,7 +1054,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category5Button5.setVisible(false);
+        String catText5_5 = menu.categoryArray[4].itemList[4].getItemName();
+        if(catText5_5.equals(""))
+        {
+            category5Button5.setVisible(false);
+        }
+        else
+        {
+            category5Button5.setVisible(true);
+        }
         category5Button5.setBackground(new java.awt.Color(0, 0, 200));
         category5Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button5.setForeground(new java.awt.Color(255, 255, 255));
@@ -787,7 +1073,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category5Button6.setVisible(false);
+        String catText5_6 = menu.categoryArray[4].itemList[5].getItemName();
+        if(catText5_6.equals(""))
+        {
+            category5Button6.setVisible(false);
+        }
+        else
+        {
+            category5Button6.setVisible(true);
+        }
         category5Button6.setBackground(new java.awt.Color(0, 0, 200));
         category5Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button6.setForeground(new java.awt.Color(255, 255, 255));
@@ -798,7 +1092,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category5Button7.setVisible(false);
+        String catText5_7 = menu.categoryArray[4].itemList[6].getItemName();
+        if(catText5_7.equals(""))
+        {
+            category5Button7.setVisible(false);
+        }
+        else
+        {
+            category5Button7.setVisible(true);
+        }
         category5Button7.setBackground(new java.awt.Color(0, 0, 200));
         category5Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button7.setForeground(new java.awt.Color(255, 255, 255));
@@ -809,7 +1111,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category5Button8.setVisible(false);
+        String catText5_8 = menu.categoryArray[4].itemList[7].getItemName();
+        if(catText5_8.equals(""))
+        {
+            category5Button8.setVisible(false);
+        }
+        else
+        {
+            category5Button8.setVisible(true);
+        }
         category5Button8.setBackground(new java.awt.Color(0, 0, 200));
         category5Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category5Button8.setForeground(new java.awt.Color(255, 255, 255));
@@ -871,7 +1181,15 @@ public class Menu_UI extends javax.swing.JFrame {
         categoyLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         categoyLabel5.setText(categoryName6);
 
-        //category6Button1.setVisible(true);
+        String catText6_1 = menu.categoryArray[5].itemList[0].getItemName();
+        if(catText6_1.equals(""))
+        {
+            category6Button1.setVisible(false);
+        }
+        else
+        {
+            category6Button1.setVisible(true);
+        }
         category6Button1.setBackground(new java.awt.Color(0, 0, 200));
         category6Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button1.setForeground(new java.awt.Color(255, 255, 255));
@@ -882,7 +1200,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category6Button2.setVisible(false);
+        String catText6_2 = menu.categoryArray[5].itemList[1].getItemName();
+        if(catText6_2.equals(""))
+        {
+            category6Button2.setVisible(false);
+        }
+        else
+        {
+            category6Button2.setVisible(true);
+        }
         category6Button2.setBackground(new java.awt.Color(0, 0, 200));
         category6Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button2.setForeground(new java.awt.Color(255, 255, 255));
@@ -893,7 +1219,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category6Button3.setVisible(false);
+        String catText6_3 = menu.categoryArray[5].itemList[2].getItemName();
+        if(catText6_3.equals(""))
+        {
+            category6Button3.setVisible(false);
+        }
+        else
+        {
+            category6Button3.setVisible(true);
+        }
         category6Button3.setBackground(new java.awt.Color(0, 0, 200));
         category6Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button3.setForeground(new java.awt.Color(255, 255, 255));
@@ -904,7 +1238,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category6Button4.setVisible(false);
+        String catText6_4 = menu.categoryArray[5].itemList[3].getItemName();
+        if(catText6_4.equals(""))
+        {
+            category6Button4.setVisible(false);
+        }
+        else
+        {
+            category6Button4.setVisible(true);
+        }
         category6Button4.setBackground(new java.awt.Color(0, 0, 200));
         category6Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button4.setForeground(new java.awt.Color(255, 255, 255));
@@ -915,7 +1257,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category6Button5.setVisible(false);
+        String catText6_5 = menu.categoryArray[5].itemList[4].getItemName();
+        if(catText6_5.equals(""))
+        {
+            category6Button5.setVisible(false);
+        }
+        else
+        {
+            category6Button5.setVisible(true);
+        }
         category6Button5.setBackground(new java.awt.Color(0, 0, 200));
         category6Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button5.setForeground(new java.awt.Color(255, 255, 255));
@@ -926,7 +1276,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category6Button6.setVisible(false);
+        String catText6_6 = menu.categoryArray[5].itemList[5].getItemName();
+        if(catText6_6.equals(""))
+        {
+            category6Button6.setVisible(false);
+        }
+        else
+        {
+            category6Button6.setVisible(true);
+        }
         category6Button6.setBackground(new java.awt.Color(0, 0, 200));
         category6Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button6.setForeground(new java.awt.Color(255, 255, 255));
@@ -937,7 +1295,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category6Button7.setVisible(false);
+        String catText6_7 = menu.categoryArray[5].itemList[6].getItemName();
+        if(catText6_7.equals(""))
+        {
+            category6Button7.setVisible(false);
+        }
+        else
+        {
+            category6Button7.setVisible(true);
+        }
         category6Button7.setBackground(new java.awt.Color(0, 0, 200));
         category6Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button7.setForeground(new java.awt.Color(255, 255, 255));
@@ -948,7 +1314,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category6Button8.setVisible(false);
+        String catText6_8 = menu.categoryArray[5].itemList[7].getItemName();
+        if(catText6_8.equals(""))
+        {
+            category6Button8.setVisible(false);
+        }
+        else
+        {
+            category6Button8.setVisible(true);
+        }
         category6Button8.setBackground(new java.awt.Color(0, 0, 200));
         category6Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category6Button8.setForeground(new java.awt.Color(255, 255, 255));
@@ -1012,7 +1386,15 @@ public class Menu_UI extends javax.swing.JFrame {
         categoyLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         categoyLabel6.setText(categoryName7);
 
-        //category7Button1.setVisible(true);
+        String catText7_1 = menu.categoryArray[6].itemList[0].getItemName();
+        if(catText7_1.equals(""))
+        {
+            category7Button1.setVisible(false);
+        }
+        else
+        {
+            category7Button1.setVisible(true);
+        }
         category7Button1.setBackground(new java.awt.Color(0, 0, 200));
         category7Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button1.setForeground(new java.awt.Color(255, 255, 255));
@@ -1023,7 +1405,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category7Button2.setVisible(false);
+        String catText7_2 = menu.categoryArray[6].itemList[1].getItemName();
+        if(catText7_2.equals(""))
+        {
+            category7Button2.setVisible(false);
+        }
+        else
+        {
+            category7Button2.setVisible(true);
+        }
         category7Button2.setBackground(new java.awt.Color(0, 0, 200));
         category7Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button2.setForeground(new java.awt.Color(255, 255, 255));
@@ -1034,7 +1424,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category7Button3.setVisible(false);
+        String catText7_3 = menu.categoryArray[6].itemList[2].getItemName();
+        if(catText7_3.equals(""))
+        {
+            category7Button3.setVisible(false);
+        }
+        else
+        {
+            category7Button3.setVisible(true);
+        }
         category7Button3.setBackground(new java.awt.Color(0, 0, 200));
         category7Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button3.setForeground(new java.awt.Color(255, 255, 255));
@@ -1045,7 +1443,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category7Button4.setVisible(false);
+        String catText7_4 = menu.categoryArray[6].itemList[3].getItemName();
+        if(catText7_4.equals(""))
+        {
+            category7Button4.setVisible(false);
+        }
+        else
+        {
+            category7Button4.setVisible(true);
+        }
         category7Button4.setBackground(new java.awt.Color(0, 0, 200));
         category7Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button4.setForeground(new java.awt.Color(255, 255, 255));
@@ -1056,7 +1462,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category7Button5.setVisible(false);
+        String catText7_5 = menu.categoryArray[6].itemList[4].getItemName();
+        if(catText7_5.equals(""))
+        {
+            category7Button5.setVisible(false);
+        }
+        else
+        {
+            category7Button5.setVisible(true);
+        }
         category7Button5.setBackground(new java.awt.Color(0, 0, 200));
         category7Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button5.setForeground(new java.awt.Color(255, 255, 255));
@@ -1067,7 +1481,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //ategory7Button6.setVisible(false);
+        String catText7_6 = menu.categoryArray[6].itemList[5].getItemName();
+        if(catText7_6.equals(""))
+        {
+            category7Button6.setVisible(false);
+        }
+        else
+        {
+            category7Button6.setVisible(true);
+        }
         category7Button6.setBackground(new java.awt.Color(0, 0, 200));
         category7Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button6.setForeground(new java.awt.Color(255, 255, 255));
@@ -1078,7 +1500,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category7Button7.setVisible(false);
+        String catText7_7 = menu.categoryArray[6].itemList[6].getItemName();
+        if(catText7_7.equals(""))
+        {
+            category7Button7.setVisible(false);
+        }
+        else
+        {
+            category7Button7.setVisible(true);
+        }
         category7Button7.setBackground(new java.awt.Color(0, 0, 200));
         category7Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button7.setForeground(new java.awt.Color(255, 255, 255));
@@ -1089,7 +1519,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category7Button8.setVisible(false);
+        String catText7_8 = menu.categoryArray[6].itemList[7].getItemName();
+        if(catText7_8.equals(""))
+        {
+            category7Button8.setVisible(false);
+        }
+        else
+        {
+            category7Button8.setVisible(true);
+        }
         category7Button8.setBackground(new java.awt.Color(0, 0, 200));
         category7Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category7Button8.setForeground(new java.awt.Color(255, 255, 255));
@@ -1153,7 +1591,15 @@ public class Menu_UI extends javax.swing.JFrame {
         categoyLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         categoyLabel7.setText(categoryName8);
 
-        //category8Button1.setVisible(true);
+        String catText8_1 = menu.categoryArray[7].itemList[0].getItemName();
+        if(catText8_1.equals(""))
+        {
+            category8Button1.setVisible(false);
+        }
+        else
+        {
+            category8Button1.setVisible(true);
+        }
         category8Button1.setBackground(new java.awt.Color(0, 0, 200));
         category8Button1.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button1.setForeground(new java.awt.Color(255, 255, 255));
@@ -1164,7 +1610,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category8Button2.setVisible(false);
+        String catText8_2 = menu.categoryArray[7].itemList[1].getItemName();
+        if(catText8_2.equals(""))
+        {
+            category8Button2.setVisible(false);
+        }
+        else
+        {
+            category8Button2.setVisible(true);
+        }
         category8Button2.setBackground(new java.awt.Color(0, 0, 200));
         category8Button2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button2.setForeground(new java.awt.Color(255, 255, 255));
@@ -1175,7 +1629,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category8Button3.setVisible(false);
+        String catText8_3 = menu.categoryArray[7].itemList[2].getItemName();
+        if(catText8_3.equals(""))
+        {
+            category8Button3.setVisible(false);
+        }
+        else
+        {
+            category8Button3.setVisible(true);
+        }
         category8Button3.setBackground(new java.awt.Color(0, 0, 200));
         category8Button3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button3.setForeground(new java.awt.Color(255, 255, 255));
@@ -1186,7 +1648,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category8Button4.setVisible(false);
+        String catText8_4 = menu.categoryArray[7].itemList[3].getItemName();
+        if(catText8_4.equals(""))
+        {
+            category8Button4.setVisible(false);
+        }
+        else
+        {
+            category8Button4.setVisible(true);
+        }
         category8Button4.setBackground(new java.awt.Color(0, 0, 200));
         category8Button4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button4.setForeground(new java.awt.Color(255, 255, 255));
@@ -1197,7 +1667,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category8Button5.setVisible(false);
+        String catText8_5 = menu.categoryArray[7].itemList[4].getItemName();
+        if(catText8_5.equals(""))
+        {
+            category8Button5.setVisible(false);
+        }
+        else
+        {
+            category8Button5.setVisible(true);
+        }
         category8Button5.setBackground(new java.awt.Color(0, 0, 200));
         category8Button5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button5.setForeground(new java.awt.Color(255, 255, 255));
@@ -1208,7 +1686,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category8Button6.setVisible(false);
+        String catText8_6 = menu.categoryArray[7].itemList[5].getItemName();
+        if(catText8_6.equals(""))
+        {
+            category8Button6.setVisible(false);
+        }
+        else
+        {
+            category8Button6.setVisible(true);
+        }
         category8Button6.setBackground(new java.awt.Color(0, 0, 200));
         category8Button6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button6.setForeground(new java.awt.Color(255, 255, 255));
@@ -1219,7 +1705,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category8Button7.setVisible(false);
+        String catText8_7 = menu.categoryArray[7].itemList[6].getItemName();
+        if(catText8_7.equals(""))
+        {
+            category8Button7.setVisible(false);
+        }
+        else
+        {
+            category8Button7.setVisible(true);
+        }
         category8Button7.setBackground(new java.awt.Color(0, 0, 200));
         category8Button7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button7.setForeground(new java.awt.Color(255, 255, 255));
@@ -1230,7 +1724,15 @@ public class Menu_UI extends javax.swing.JFrame {
             }
         });
 
-        //category8Button8.setVisible(false);
+        String catText8_8 = menu.categoryArray[7].itemList[7].getItemName();
+        if(catText8_8.equals(""))
+        {
+            category8Button8.setVisible(false);
+        }
+        else
+        {
+            category8Button8.setVisible(true);
+        }
         category8Button8.setBackground(new java.awt.Color(0, 0, 200));
         category8Button8.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         category8Button8.setForeground(new java.awt.Color(255, 255, 255));
@@ -1408,8 +1910,11 @@ public class Menu_UI extends javax.swing.JFrame {
         kitchenUI.addOrderToEmptyJList(getListModel());
         //Hide the order window.
         frame.setVisible(false);
+<<<<<<< HEAD
+=======
         //Return to the start menu.
         startmenu.setVisible(true);
+>>>>>>> refs/remotes/origin/master
        // kitchenUI.setVisible(true);
     }//GEN-LAST:event_placeOrderButtonActionPerformed
 
