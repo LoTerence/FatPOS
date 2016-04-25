@@ -17,6 +17,7 @@ public class KitchenViewUI extends javax.swing.JFrame {
      */
     public KitchenViewUI() {
         initComponents();
+        setVisible(true);
     }
 
     /**
@@ -51,7 +52,7 @@ public class KitchenViewUI extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         removeOrderButton5 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
