@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package middle_end;
-
+import javax.swing.*;
 /**
  * <!-- begin-user-doc -->
  * Whenever wait staff place an order, a NewOrder object is instantiated.
@@ -256,12 +256,14 @@ public class NewOrder
 	 * <!-- begin-user-doc -->
 	 * Add the order to the list of orders that are visible to the kitchen view.
 	 * <!--  end-user-doc  -->
+     * @param orderModel The list model of the order sent so that it can be reflected on the list of orders in the kitchen.
 	 * @generated
 	 * @ordered
 	 */
 	
-	public void sendToKitchen() {
+	public void sendToKitchen(DefaultListModel orderModel) {
 		kitchenView.addOrder(this);
+                kitchenView.addOrderList(orderModel);
 	}
 
 }
