@@ -17,11 +17,14 @@ public class StartMenu_UI extends javax.swing.JFrame {
     public StartMenu_UI() {
         kitchenViewUI = new KitchenViewUI();
         kitchenViewUI.setVisible(false);
+        menuEditor = new MenuEditorUI();
+        menuEditor.setVisible(false);
         startFrame = this;
         initComponents();
     }
     public StartMenu_UI startFrame;
     public KitchenViewUI kitchenViewUI;
+    public MenuEditorUI menuEditor;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -92,6 +95,11 @@ public class StartMenu_UI extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Configure Restaurant Menu");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
@@ -150,7 +158,8 @@ public class StartMenu_UI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        StatsUI stat= new StatsUI();
+        StatsUI stat = new StatsUI();
+        stat.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -165,6 +174,10 @@ public class StartMenu_UI extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         kitchenViewUI.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        menuEditor.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

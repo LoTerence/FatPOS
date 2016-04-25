@@ -14,6 +14,9 @@ public class Menu_UI extends javax.swing.JFrame {
 
     /**
      * Creates new form Menu_UI
+     * @param kitchenView reference to the kitchen view so the order page can communocate with the kitchen
+     * when an order is placed.
+     * @param start allows the user to go back to the start menu when the order menu closes.
      */
     public Menu_UI(KitchenViewUI kitchenView, StartMenu_UI start) {
         initComponents();
@@ -283,6 +286,7 @@ public class Menu_UI extends javax.swing.JFrame {
         );
 
         placeOrderButton.setBackground(new java.awt.Color(0, 0, 200));
+        placeOrderButton.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         placeOrderButton.setForeground(new java.awt.Color(255, 255, 255));
         placeOrderButton.setText("Place Order");
         placeOrderButton.addActionListener(new java.awt.event.ActionListener() {
@@ -292,6 +296,7 @@ public class Menu_UI extends javax.swing.JFrame {
         });
 
         removeItemButton.setBackground(new java.awt.Color(0, 0, 200));
+        removeItemButton.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
         removeItemButton.setForeground(new java.awt.Color(255, 255, 255));
         removeItemButton.setText("Remove Item");
         removeItemButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1403,9 +1408,44 @@ public class Menu_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_category1Button2ActionPerformed
 
     private void placeOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeOrderButtonActionPerformed
+        //The total cost of the orer. This will be added to the total profit in the database.
+        int orderTotal = 0;
+        //The total amount of item preparation time for all items in the order.
+        //This will be added to the total preparation time in the database.
+        int totalPrepTime = 0;
+        //Used to store the order count.
+        int itemOrderCount = 0;
+        //Preents the database from being updated when the order list is full.
+        if(getListModel().getSize() < 5)
+        {
+            //Temporarily holds a menu item object.
+            MenuItem item;
+            for(int i = 0; i < getListModel().getSize(); i++)
+            {
+                //Get a reference to the item from the orderlist.
+                item = order.getItem(i);
+                //Fetch the item prep time and add it to totalPrepTime
+                totalPrepTime += item.getItemPrepTime();
+                //Retrieve the item order count.
+                itemOrderCount = item.getOrderCount();
+                 /*
+                DATABASE!!! Use itemOrderCount to set the new order count in the database to what this 
+                            method returns.
+                */
+            }
+            //Get the total cost from the place order button text.
+            orderTotal = Integer.parseInt(orderTotalLabel1.getText());
+            /*
+            DATABASE!!! USE totalItemPrepTime and orderTotal to add
+                         to the values stored in the database.
+            */
+        }
+        
+        
         //Sends the order to the kitchen by adding the order to the list of orders for the kitchen to see.
         order.sendToKitchen();
         kitchenUI.addOrderToEmptyJList(getListModel());
+
         //Hide the order window.
         frame.setVisible(false);
         //Return to the start menu.
