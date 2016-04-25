@@ -19,12 +19,20 @@ public class StatsUI extends javax.swing.JFrame {
      */
    // private final StatsPage statsPage;
     private String monthlyProfit;
+    private StatsPage statsPage;
     public StatsUI() {
-        //this.statsPage = new StatsPage();
+        this.statsPage = new StatsPage();
+        /*
+        DATABASE!!! Must initialize the stats(in the design window) by calling the set functions
+                    that are provided in StatsPage.java. So for example,
+                    Assign statsPage.setMonthlyPrepTimeto the total prep time in the database.
+                    etc.. and o this for all 6 set functions.
+        */
         initComponents();
+        //StatsPage statsPage = new StatsPage();
         setVisible(true);
     }
-    
+    //public StatsPage statsPage;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,120 +42,165 @@ public class StatsUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        monthlyProfitLabel = new javax.swing.JLabel();
-        monthlyPrepTimeLabel = new javax.swing.JLabel();
-        dishMostNameLabel = new javax.swing.JLabel();
-        dishMostCountLabel = new javax.swing.JLabel();
-        dishLeastNameLabel = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         dishLeastLabel = new javax.swing.JLabel();
+        dishLeastNameLabel = new javax.swing.JLabel();
+        dishMostCountLabel = new javax.swing.JLabel();
+        dishMostNameLabel = new javax.swing.JLabel();
+        monthlyPrepTimeLabel = new javax.swing.JLabel();
+        monthlyProfitLabel = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
 
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel1.setFont(new java.awt.Font("Vani", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Statistics View");
 
+        jLabel2.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Total Monthly Profit");
 
-        jLabel3.setText("Dish Ordered Most Frequently");
-
-        jLabel4.setText("Dish Ordered Least Frequently");
-
-        jLabel5.setText("Number of Times Dish Was Ordered");
-
-        jLabel6.setText("Number of Times Dish Was Ordered");
-
+        jLabel7.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Total Monthly Preparation Time");
 
-        StatsPage statsPage = new StatsPage();
-        statsPage.setMonthlyProfit(123);
-        String monthlyProfitText = "" + statsPage.getMonthlyProfit();
-        monthlyProfitLabel.setText(monthlyProfitText);
+        jLabel3.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Dish Ordered Most Frequently");
 
-        statsPage.setMonthlyPrepTime(100);
-        String monthlyPrepTimeText = "" + statsPage.getMonthlyPrepTime();
-        monthlyPrepTimeLabel.setText(monthlyPrepTimeText);
+        jLabel5.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Number of Times Dish Was Ordered");
 
-        statsPage.setMostDishesName("Cheeseburger");
-        String mostDishesNameText = "" + statsPage.getMostDishesName();
-        dishMostNameLabel.setText(mostDishesNameText);
+        jLabel4.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Dish Ordered Least Frequently");
 
-        statsPage.setMostDishes(99);
-        String mostDishesText = "" + statsPage.getMostDishes();
-        dishMostCountLabel.setText(mostDishesText);
+        jLabel6.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Number of Times Dish Was Ordered");
 
-        statsPage.setLeastDishesName("Asparagus");
+        String leastDishesText = "" + statsPage.getLeastDishes();
+        dishLeastLabel.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        dishLeastLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dishLeastLabel.setText(leastDishesText);
+
         String leastDishesNameText = "" + statsPage.getLeastDishesName();
+        dishLeastNameLabel.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        dishLeastNameLabel.setForeground(new java.awt.Color(255, 255, 255));
         dishLeastNameLabel.setText(leastDishesNameText);
 
-        statsPage.setLeastDishes(12);
-        String leastDishesText = "" + statsPage.getLeastDishes();
-        dishLeastLabel.setText(leastDishesText);
+        String mostDishesText = "" + statsPage.getMostDishes();
+        dishMostCountLabel.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        dishMostCountLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dishMostCountLabel.setText(mostDishesText);
+
+        String mostDishesNameText = "" + statsPage.getMostDishesName();
+        dishMostNameLabel.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        dishMostNameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dishMostNameLabel.setText(mostDishesNameText);
+
+        String monthlyPrepTimeText = "" + statsPage.getMonthlyPrepTime();
+        monthlyPrepTimeLabel.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        monthlyPrepTimeLabel.setForeground(new java.awt.Color(255, 255, 255));
+        monthlyPrepTimeLabel.setText(monthlyPrepTimeText);
+
+        String monthlyProfitText = "" + statsPage.getMonthlyProfit();
+        monthlyProfitLabel.setFont(new java.awt.Font("Vani", 3, 14)); // NOI18N
+        monthlyProfitLabel.setForeground(new java.awt.Color(255, 255, 255));
+        monthlyProfitLabel.setText(monthlyProfitText);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(139, 139, 139)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(dishLeastNameLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                            .addComponent(dishMostCountLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dishMostNameLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(monthlyPrepTimeLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(monthlyProfitLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dishLeastLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(352, 352, 352)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(monthlyProfitLabel))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(monthlyPrepTimeLabel))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(dishMostNameLabel))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(dishMostCountLabel))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(dishLeastNameLabel))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(dishLeastLabel))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(139, 139, 139)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(monthlyProfitLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(monthlyPrepTimeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dishMostNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dishMostCountLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dishLeastNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dishLeastLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 328, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(333, 333, 333))))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(monthlyProfitLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(monthlyPrepTimeLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(dishMostNameLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(dishMostCountLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(dishLeastNameLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(dishLeastLabel))
-                .addContainerGap(87, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -201,27 +254,9 @@ public class StatsUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel monthlyPrepTimeLabel;
     private javax.swing.JLabel monthlyProfitLabel;
     // End of variables declaration//GEN-END:variables
-//statsPage.setMonthlyProfit(9999);
-       /* private String monthlyProfitText = "" + statsPage.getMonthlyProfit();
-        
-        monthlyProfitText = "" + statsPage.getMonthlyProfit();
-        monthlyProfit1.setText(monthlyProfitText);
-
-        monthlyPrepTimeText = "" + statsPage.getMonthlyPrepTime();
-        monthlyPrepTime1.setText(monthlyPrepTimeText);
-
-        mostDishesNameText = "" + statsPage.getMostDishesName();
-        mostDishesName1.setText(mostDishesNameText);
-
-        mostDishesOrderedText = "" + statsPage.getMostDishes();
-        mostDishesOrdered1.setText(mostDishesOrderedText);
-
-        leastDishesNameText = "" + statsPage.getLeastDishesName();
-        leastDishesName1.setText(leastDishesNameText);
-
-        leastDishesOrderedText = "" + statsPage.getLeastDishes();
-        leastDishesOrdered1.setText(leastDishesOrderedText);*/
 }
