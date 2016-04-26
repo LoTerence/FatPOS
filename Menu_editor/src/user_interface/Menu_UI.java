@@ -2390,9 +2390,12 @@ public class Menu_UI extends javax.swing.JFrame {
 
     //When the user clicks the Back to Start button,a pop up shows up that asks if he is sure he wants to discard any unplaced orders.
     private void backToStartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToStartButtonActionPerformed
-        JOptionPane input = new JOptionPane("Are you sure you want to go back to the start menu?/n"
-                +"Any unplaced orders will be lost.", JOptionPane.YES_NO_OPTION);
-        //this.dispose();
+        int input = JOptionPane.showConfirmDialog(null, "Are you sure you want to go back to the start menu?\n"
+                +"Any unplaced orders will be lost.", "Chill out for a second", JOptionPane.YES_NO_OPTION);
+        if (input == JOptionPane.YES_OPTION){
+            this.dispose();
+        }
+        else{}
     }//GEN-LAST:event_backToStartButtonActionPerformed
 
     //Function to get the list model of the orderJList
