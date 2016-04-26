@@ -48,47 +48,44 @@
               <Component id="categoryPanel8" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="removeItemButton" max="32767" attributes="0"/>
-                          <Component id="placeOrderButton" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jScrollPane2" pref="0" max="32767" attributes="0"/>
+                  <Component id="placeOrderButton" max="32767" attributes="0"/>
+                  <Component id="removeItemButton" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="orderTotalLabel" min="-2" pref="117" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="orderTotalLabel1" min="-2" pref="117" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane2" pref="0" max="32767" attributes="0"/>
+                  <Component id="backToStartButton" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="categoryPanel5" alignment="0" pref="717" max="32767" attributes="0"/>
+          <Component id="categoryPanel5" alignment="0" pref="722" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jScrollPane2" min="-2" pref="573" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane2" min="-2" pref="531" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="orderTotalLabel" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                   <Component id="orderTotalLabel1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="placeOrderButton" min="-2" pref="33" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="removeItemButton" min="-2" pref="36" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="backToStartButton" pref="34" max="32767" attributes="0"/>
           </Group>
-          <Component id="categoryPanel8" pref="717" max="32767" attributes="0"/>
-          <Component id="categoryPanel4" alignment="1" pref="717" max="32767" attributes="0"/>
-          <Component id="categoryPanel3" alignment="1" pref="717" max="32767" attributes="0"/>
+          <Component id="categoryPanel8" pref="722" max="32767" attributes="0"/>
+          <Component id="categoryPanel4" alignment="1" pref="722" max="32767" attributes="0"/>
+          <Component id="categoryPanel3" alignment="1" pref="722" max="32767" attributes="0"/>
           <Component id="categoryPanel2" alignment="1" max="32767" attributes="0"/>
-          <Component id="categoryPanel1" alignment="1" pref="717" max="32767" attributes="0"/>
-          <Component id="categoryPanel6" pref="717" max="32767" attributes="0"/>
-          <Component id="categoryPanel7" alignment="1" pref="717" max="32767" attributes="0"/>
+          <Component id="categoryPanel1" alignment="1" pref="722" max="32767" attributes="0"/>
+          <Component id="categoryPanel6" pref="722" max="32767" attributes="0"/>
+          <Component id="categoryPanel7" alignment="1" pref="722" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -384,6 +381,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeItemButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="backToStartButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Go back to Start"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backToStartButtonActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="categoryPanel2">

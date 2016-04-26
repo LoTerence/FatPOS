@@ -1,6 +1,6 @@
 # NetBeans specific #
-nbproject/private/
-build/
+Menu_editor/nbproject/private/
+Menu_editor/build/
 nbbuild/
 dist/
 nbdist/
