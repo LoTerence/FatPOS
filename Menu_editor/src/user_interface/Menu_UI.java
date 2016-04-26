@@ -2398,16 +2398,23 @@ public class Menu_UI extends javax.swing.JFrame {
     {
        //Add a comment to the item in the order. For example, if a customer orders a 
        //cheeseburger, maybe they want no lettuce or extra ketchup.
-       String comment = JOptionPane.showInputDialog(null, "Any special instructions regarding your order?\n"
+        String comment = JOptionPane.showInputDialog(null, "Any special instructions regarding your order?\n"
                + "Leave the text field blank if there are no special instructions.");
-
-       //Add the item along with any special instructions to the list.
-       model.addElement(button.getText() + " " + comment);
-       item.setItemPrice(100);
-       order.addToTotal(item.getItemPrice());
-       totalCost = "" + order.getTotalCost();
-       orderTotalLabel1.setText(totalCost);
-       order.addToOrder(item);
+       
+        if(comment == null )   
+        {
+            //throw new EmptyFieldsException();
+        }
+        else
+        {
+            //Add the item along with any special instructions to the list.
+            model.addElement(button.getText() + " " + comment);
+            item.setItemPrice(100);
+            order.addToTotal(item.getItemPrice());
+            totalCost = "" + order.getTotalCost();
+            orderTotalLabel1.setText(totalCost);
+            order.addToOrder(item);
+        }
     }
     /**
      * @param args the command line arguments
