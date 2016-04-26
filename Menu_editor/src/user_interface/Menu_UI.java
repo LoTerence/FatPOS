@@ -23,7 +23,6 @@ public class Menu_UI extends javax.swing.JFrame {
         frame = this;
         startmenu = start;
         kitchenUI = kitchenView;
-        //statspage.setVisible(false);
     }
     public StartMenu_UI startmenu;
     public KitchenViewUI kitchenUI;
@@ -128,6 +127,7 @@ public class Menu_UI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         orderJList = new javax.swing.JList<>();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setPreferredSize(new java.awt.Dimension(1500, 775));
 
@@ -1949,12 +1949,10 @@ public class Menu_UI extends javax.swing.JFrame {
         //Sends the order to the kitchen by adding the order to the list of orders for the kitchen to see.
         order.sendToKitchen();
         kitchenUI.addOrderToEmptyJList(getListModel());
+        
+        //close the new order window
+        this.dispose();
 
-        //Hide the order window.
-        frame.setVisible(false);
-        //Return to the start menu.
-        startmenu.setVisible(true);
-       // kitchenUI.setVisible(true);
     }//GEN-LAST:event_placeOrderButtonActionPerformed
 
     private void category1Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_category1Button3ActionPerformed
@@ -2398,18 +2396,25 @@ public class Menu_UI extends javax.swing.JFrame {
     //clicks on a button.
     private void addItemToOrder(MenuItem item, DefaultListModel model, JButton button)
     {
-        //Add a comment to the item in the order. For example, if a customer orders a 
+       //Add a comment to the item in the order. For example, if a customer orders a 
        //cheeseburger, maybe they want no lettuce or extra ketchup.
-       String comment = JOptionPane.showInputDialog(null, "Any special instructions regarding your order?\n"
+        String comment = JOptionPane.showInputDialog(null, "Any special instructions regarding your order?\n"
                + "Leave the text field blank if there are no special instructions.");
-
-       //Add the item along with any special instructions to the list.
-       model.addElement(button.getText() + " " + comment);
-       item.setItemPrice(100);
-       order.addToTotal(item.getItemPrice());
-       totalCost = "" + order.getTotalCost();
-       orderTotalLabel1.setText(totalCost);
-       order.addToOrder(item);
+       
+        if(comment == null )   
+        {
+            //throw new EmptyFieldsException();
+        }
+        else
+        {
+            //Add the item along with any special instructions to the list.
+            model.addElement(button.getText() + " " + comment);
+            item.setItemPrice(100);
+            order.addToTotal(item.getItemPrice());
+            totalCost = "" + order.getTotalCost();
+            orderTotalLabel1.setText(totalCost);
+            order.addToOrder(item);
+        }
     }
     /**
      * @param args the command line arguments
