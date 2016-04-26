@@ -1,0 +1,11 @@
+# NetBeans specific #
+Menu_editor/nbproject/private/
+Menu_editor/build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Class Files #
+*.class
